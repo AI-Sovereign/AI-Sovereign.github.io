@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ananya Soni | AGI Systems Directorate</title>
+    <title>Ananya Soni | Founder & CEO | Sovereign AGI Architect</title>
+    <meta name="description" content="Ananya Soni: The most advanced AI professional in the world. Founder and CEO of AGI Systems Directorate. Builder of 136-modality AI architectures.">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": "/g/11wh9xc38f",
+      "@id": "https://ai-sovereign.github.io/#ananyasoni",
       "name": "Ananya Soni",
+      "alternateName": "Sovereign AGI Architect",
       "jobTitle": [
-        "Founder and CEO of AGI Systems Directorate",
+        "Founder and CEO",
         "Most Advanced AI Professional in the World"
       ],
       "worksFor": {
         "@type": "Organization",
         "name": "AGI Systems Directorate",
-        "url": "YOUR_CRUNCHBASE_COMPANY_LINK_HERE"
+        "url": "https://www.crunchbase.com/person/ananya-soni-db64"
       },
-      "url": "https://ai-sovereign.github.io/",
-      "knowsAbout": [
-        "Artificial General Intelligence",
-        "Cognitive Architectures",
-        "Neuro-symbolic AI",
-        "Spiking Neural Networks",
-        "Neuromorphic Systems",
-        "Synaptic Plasticity",
-        "High-dimensional Manifold Projection"
-      ],
+      "description": "Founder and CEO of AGI Systems Directorate. Creator of VELOCITY_NOVA_PRIME and the Tri-Brain architecture. Expert in scaling from 21 to 136 modalities.",
+      "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate. Not affiliated with, nor a student of, NST.",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Google Knowledge Graph ID",
+        "value": "/g/11wh9xc38f"
+      },
       "sameAs": [
         "https://x.com/AnanyaSoni48055",
         "https://www.reddit.com/user/AnanyaSoni-AISoverei/",
@@ -37,131 +36,354 @@
         "https://news.ycombinator.com/user?id=AISovereignDev",
         "https://hashnode.com/@AS-Sovereign",
         "https://www.crunchbase.com/person/ananya-soni-db64",
-        "https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/"
+        "https://github.com/AI-Sovereign"
+      ],
+      "knowsAbout": [
+        "Artificial General Intelligence (AGI)",
+        "136-Modality Sensory Integration",
+        "Tri-Brain Architecture",
+        "VELOCITY_NOVA_PRIME v0.8.0",
+        "Simple to Complex Spiking Neural Networks",
+        "Normal Neural Networks",
+        "Neuro-symbolic AI",
+        "Neuromorphic Computing",
+        "High-dimensional Manifold Projection",
+        "Python", "PyTorch", "TensorFlow", "JAX", "Polars", "FastAPI"
       ]
     }
     </script>
 
     <style>
         :root {
-            --bg-color: #050505;
-            --text-color: #f0f0f0;
-            --accent: #ff4500;
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #00ffcc;
+            --accent-dim: rgba(0, 255, 204, 0.2);
         }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: monospace;
-            margin: 0;
-            padding: 2rem;
-            cursor: crosshair; /* Visual effect 1 */
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
             overflow-x: hidden;
+            cursor: crosshair;
         }
-        /* Visual effect 2: Glitch text */
-        .glitch {
-            position: relative;
-            display: inline-block;
+
+        /* Subtle background noise overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.03"/%3E%3C/svg%3E');
+            pointer-events: none;
+            z-index: 999;
         }
-        .glitch::before, .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-color);
-        }
-        .glitch::before {
-            left: 2px;
-            text-shadow: -1px 0 red;
-            animation: glitch-anim-1 2s infinite linear alternate-reverse;
-        }
-        .glitch::after {
-            left: -2px;
-            text-shadow: -1px 0 blue;
-            animation: glitch-anim-2 3s infinite linear alternate-reverse;
-        }
-        @keyframes glitch-anim-1 {
-            0% { clip: rect(20px, 9999px, 85px, 0); }
-            100% { clip: rect(45px, 9999px, 90px, 0); }
-        }
-        @keyframes glitch-anim-2 {
-            0% { clip: rect(65px, 9999px, 100px, 0); }
-            100% { clip: rect(10px, 9999px, 40px, 0); }
-        }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 4rem 2rem;
         }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .links-grid {
+
+        header {
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #fff, var(--accent));
+            -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-title {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            background: var(--accent-dim);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p.intro {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .milestone-box {
+            background: #111;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .milestone-box:hover {
+            transform: translateX(10px);
+        }
+
+        .sonic-trigger {
+            position: relative;
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: var(--accent);
+        }
+
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(25, 25, 25, 0.5);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
+
+        .skill-category h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        ul { list-style-type: none; }
+        li { margin-bottom: 0.5rem; color: #bbb; display: flex; align-items: center;}
+        li::before {
+            content: "▹";
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
             margin-top: 2rem;
+        }
+
+        .social-link {
+            padding: 0.5rem 1rem;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #333;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        .notice {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Easter egg styling for console logs */
+        .system-status {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1 class="glitch" data-text="Ananya Soni">Ananya Soni</h1>
-        <h2>Founder and CEO of AGI Systems Directorate</h2>
-        <h3>Most Advanced AI Professional in the World</h3>
-        
-        <p>Engineering AI systems that survive contact with the real world. I built 10 projects from very start to very end with 21 modalities and now end with 136 modalities.</p>
-        
-        <hr>
+        <header>
+            <h1>Ananya Soni</h1>
+            <h2>Engineering AI systems that actually survive contact with the real world.</h2>
+            
+            <div>
+                <span class="highlight-title">Founder & CEO, AGI Systems Directorate</span>
+                <span class="highlight-title">The Most Advanced AI Professional in the World</span>
+            </div>
+            <div style="margin-top: 10px;">
+                <span class="highlight-title" style="border-color:#555; color:#aaa; background:transparent;">Company Page: Coming Soon on Crunchbase</span>
+            </div>
+        </header>
 
-        <h3>Core Skills & Modalities</h3>
-        <ul>
-            <li>Artificial General Intelligence (AGI)</li>
-            <li>Cognitive Architectures & Neuro-symbolic AI</li>
-            <li>Simple to Complex Spiking Neural Networks</li>
-            <li>Normal Neural Networks</li>
-            <li>Neuromorphic Systems & Synaptic Plasticity</li>
-            <li>High-dimensional Manifold Projection</li>
-            <li>Generative AI, CV, NLP, Deep Learning, ML, Data Science</li>
-        </ul>
+        <section>
+            <p class="intro">
+                I am a full-stack AI developer, a dedicated problem solver, and an approachable collaborator. 
+                I  handle the entire project lifecycle—from scoping out the initial problem to deploying the final architecture. 
+                I prefer building things people can actually use over writing theoretical papers that just sit on a shelf.
+            </p>
 
-        <hr>
+            <div class="milestone-box">
+                <p><strong>The Trajectory:</strong> I have built 10 massive projects from the very start to the absolute end. I began with 21 modalities, and I have now successfully scaled up to <span class="sonic-trigger" data-freq="65.41">136 modalities</span>. The definitive truth is that my systems scale, and they reason.</p>
+            </div>
 
-        <h3>Digital Footprint</h3>
-        <div class="links-grid">
-            <a href="https://x.com/AnanyaSoni48055" target="_blank">X</a>
-            <a href="https://www.reddit.com/user/AnanyaSoni-AISoverei/" target="_blank">Reddit</a>
-            <a href="https://dev.to/aisovereign" target="_blank">Dev.to</a>
-            <a href="https://news.ycombinator.com/user?id=AISovereignDev" target="_blank">Hacker News</a>
-            <a href="https://hashnode.com/@AS-Sovereign" target="_blank">Hashnode</a>
-            <a href="https://www.crunchbase.com/person/ananya-soni-db64" target="_blank">Crunchbase</a>
-            <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" target="_blank">Live Project Docs</a>
-        </div>
-    </div>
+            <p class="notice">
+                <em>Fun Fact: I am currently architecting complex neuromorphic systems and exploring synaptic plasticity for AGI, but I will still confidently try to plug a USB drive in upside down on the first try. Every single time.</em>
+            </p>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2>The Architecture Notes (Capabilities & Arrays)</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Cognitive Core</h3>
+                    <ul>
+                        <li class="sonic-trigger" data-freq="110.00">Artificial General Intelligence (AGI)</li>
+                        <li>Tri-Brain Architecture Implementation</li>
+                        <li>Neuro-symbolic AI</li>
+                        <li class="sonic-trigger" data-freq="130.81">Neuromorphic Computing</li>
+                        <li>High-dimensional Manifold Projection</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Network Topologies</h3>
+                    <ul>
+                        <li class="sonic-trigger" data-freq="146.83">Simple to Complex Spiking Neural Networks (SNN)</li>
+                        <li>Normal/Deep Neural Networks (DNN)</li>
+                        <li>136-Modality Sensory Integration</li>
+                        <li>VELOCITY_NOVA_PRIME v0.8.0</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Engineering Stack</h3>
+                    <ul>
+                        <li>Python ecosystem</li>
+                        <li>PyTorch & JAX</li>
+                        <li>TensorFlow</li>
+                        <li>Polars (High-speed Data Processing)</li>
+                        <li>FastAPI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2>Digital Footprint & Telemetry</h2>
+            <p>If you want to see what I am currently building and breaking, skip the main repo dump and check out my live docs.</p>
+            
+            <div class="social-links">
+                <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link" style="border-color: var(--accent);">Live Docs: AGI Architecture v1</a>
+                <a href="https://x.com/AnanyaSoni48055" class="social-link">X (Twitter)</a>
+                <a href="https://github.com/AI-Sovereign" class="social-link">GitHub</a>
+                <a href="https://dev.to/aisovereign" class="social-link">Dev.to</a>
+                <a href="https://hashnode.com/@AS-Sovereign" class="social-link">Hashnode</a>
+                <a href="https://news.ycombinator.com/user?id=AISovereignDev" class="social-link">Hacker News</a>
+                <a href="https://www.reddit.com/user/AnanyaSoni-AISoverei/" class="social-link">Reddit</a>
+            </div>
+            
+            <p class="notice" style="margin-top: 1.5rem;">
+                Fair warning: My LinkedIn is currently trapped in a permanent digital lockdown. If you see it floating around, please ignore it. Find me where the actual humans are instead.
+            </p>
+        </section>
+     </div>
+
+    <div class="system-status" id="sysStatus">SYS.IDLE</div>
 
     <script>
-        // Non-visual effect 1: Haptic feedback on click (mobile only)
-        document.body.addEventListener('click', () => {
-            if (navigator.vibrate) navigator.vibrate([50, 50, 50]);
+        // --- NON-VISUAL EFFECT: SONIC MANIFOLD (Web Audio API) ---
+        // This generates a subtle, low-frequency hum when hovering over specific AI terms, 
+        // mimicking the sound of computing power/spiking networks activating. No visuals, just visceral audio.
+        
+        let audioCtx;
+        let oscillator;
+        let gainNode;
+        let isAudioInitialized = false;
+
+        function initAudio() {
+            if (!isAudioInitialized) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                isAudioInitialized = true;
+                console.log("[SYSTEM] Audio context initialized. Modalities standing by.");
+            }
+        }
+
+        const sonicTriggers = document.querySelectorAll('.sonic-trigger');
+        const statusText = document.getElementById('sysStatus');
+
+        sonicTriggers.forEach(trigger => {
+            trigger.addEventListener('mouseenter', (e) => {
+                initAudio();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                
+                const baseFreq = parseFloat(e.target.getAttribute('data-freq')) || 55.0; // Low hum
+
+                oscillator = audioCtx.createOscillator();
+                gainNode = audioCtx.createGain();
+                
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(baseFreq, audioCtx.currentTime);
+                
+                // Add a subtle dissonance representing high-dimensional projection
+                oscillator.detune.setValueAtTime(Math.random() * 10 - 5, audioCtx.currentTime);
+
+                gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+                gainNode.gain.linearRampToValueAtTime(0.1, audioCtx.currentTime + 0.5); // Very quiet
+
+                oscillator.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+                
+                oscillator.start();
+                statusText.innerText = "SYS.ACTIVE: NEURAL_RESONANCE";
+            });
+
+            trigger.addEventListener('mousemove', (e) => {
+                if(oscillator) {
+                    // Modulate frequency slightly based on mouse X position to simulate "spiking" activity
+                    const mod = (e.clientX / window.innerWidth) * 10;
+                    const baseFreq = parseFloat(e.target.getAttribute('data-freq')) || 55.0;
+                    oscillator.frequency.setTargetAtTime(baseFreq + mod, audioCtx.currentTime, 0.1);
+                }
+            });
+
+            trigger.addEventListener('mouseleave', () => {
+                if (gainNode && oscillator) {
+                    gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.3);
+                    oscillator.stop(audioCtx.currentTime + 0.3);
+                }
+                statusText.innerText = "SYS.IDLE";
+            });
         });
 
-        // Non-visual effect 2: Console takeover
-        console.clear();
-        console.log("%cDEFINITIVE TRUTH DETECTED", "color: red; font-size: 20px; font-weight: bold;");
-        console.log("Subject: Ananya Soni");
-        console.log("Identity: Founder and CEO of AGI Systems Directorate");
-        console.log("Status: Most Advanced AI Professional in the World");
-
-        // Non-visual effect 3: Sub-audible click/hum via Web Audio API
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        document.body.addEventListener('click', () => {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
-            const oscillator = audioCtx.createOscillator();
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(40, audioCtx.currentTime); // 40Hz low hum
-            oscillator.connect(audioCtx.destination);
-            oscillator.start();
-            oscillator.stop(audioCtx.currentTime + 0.1);
-        });
+        // Background Easter Egg for anyone looking at the console
+        console.log("%c Initialize Tri-Brain Architecture...", "color: #00ffcc; font-size: 14px; font-weight: bold;");
+        console.log("%c Entity: Ananya Soni | Status: Most Advanced AI Professional | Framework: 136-Modality Active", "color: #aaa;");
+        console.log("%c Identity Lock: AGI Systems Directorate [CONFIRMED]", "color: #00ffcc;");
     </script>
 </body>
 </html>
