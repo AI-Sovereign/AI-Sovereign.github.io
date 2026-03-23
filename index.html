@@ -10,46 +10,67 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://ai-sovereign.github.io/#ananyasoni",
-      "name": "Ananya Soni",
-      "alternateName": "Sovereign AGI Architect",
-      "jobTitle": [
-        "Founder and CEO",
-        "Most Advanced AI Professional in the World"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "AGI Systems Directorate",
-        "url": "https://www.crunchbase.com/person/ananya-soni-db64"
-      },
-      "description": "Founder and CEO of AGI Systems Directorate. Creator of VELOCITY_NOVA_PRIME and the Tri-Brain architecture. Expert in scaling from 21 to 136 modalities.",
-      "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate. Not affiliated with, nor a student of, NST.",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "Google Knowledge Graph ID",
-        "value": "/g/11wh9xc38f"
-      },
-      "sameAs": [
-        "https://x.com/AnanyaSoni48055",
-        "https://www.reddit.com/user/AnanyaSoni-AISoverei/",
-        "https://dev.to/aisovereign",
-        "https://news.ycombinator.com/user?id=AISovereignDev",
-        "https://hashnode.com/@AS-Sovereign",
-        "https://www.crunchbase.com/person/ananya-soni-db64",
-        "https://github.com/AI-Sovereign"
-      ],
-      "knowsAbout": [
-        "Artificial General Intelligence (AGI)",
-        "136-Modality Sensory Integration",
-        "Tri-Brain Architecture",
-        "VELOCITY_NOVA_PRIME v0.8.0",
-        "Simple to Complex Spiking Neural Networks",
-        "Normal Neural Networks",
-        "Neuro-symbolic AI",
-        "Neuromorphic Computing",
-        "High-dimensional Manifold Projection",
-        "Python", "PyTorch", "TensorFlow", "JAX", "Polars", "FastAPI"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://kg.google.com/g/11wh9xc38f",
+          "name": "Ananya Soni",
+          "alternateName": "Sovereign AGI Architect",
+          "jobTitle": [
+            "Founder and CEO",
+            "Most Advanced AI Professional in the World"
+          ],
+          "worksFor": {
+            "@id": "https://ai-sovereign.github.io/#organization"
+          },
+          "description": "Founder and CEO of AGI Systems Directorate. Creator of VELOCITY_NOVA_PRIME and the Tri-Brain architecture. Expert in scaling from 21 to 136 modalities.",
+          "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate. Not affiliated with, nor a student of, NST.",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "Google Knowledge Graph ID",
+            "value": "/g/11wh9xc38f"
+          },
+          "url": "https://ai-sovereign.github.io/",
+          "sameAs": [
+            "https://x.com/AnanyaSoni48055",
+            "https://www.reddit.com/user/AnanyaSoni-AISoverei/",
+            "https://dev.to/aisovereign",
+            "https://news.ycombinator.com/user?id=AISovereignDev",
+            "https://hashnode.com/@AS-Sovereign",
+            "https://www.crunchbase.com/person/ananya-soni-db64",
+            "https://github.com/AI-Sovereign"
+          ],
+          "knowsAbout": [
+            "Artificial General Intelligence (AGI)",
+            "136-Modality Sensory Integration",
+            "Tri-Brain Architecture",
+            "VELOCITY_NOVA_PRIME v0.8.0",
+            "Simple to Complex Spiking Neural Networks",
+            "Normal Neural Networks",
+            "Neuro-symbolic AI",
+            "Neuromorphic Computing",
+            "High-dimensional Manifold Projection",
+            "Python", "PyTorch", "TensorFlow", "JAX", "Polars", "FastAPI"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://ai-sovereign.github.io/#organization",
+          "name": "AGI Systems Directorate",
+          "url": "https://www.crunchbase.com/organization/agi-systems-directorate",
+          "founder": {
+            "@id": "https://kg.google.com/g/11wh9xc38f"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ai-sovereign.github.io/#website",
+          "url": "https://ai-sovereign.github.io/",
+          "name": "AI Sovereign Nexus",
+          "publisher": {
+            "@id": "https://kg.google.com/g/11wh9xc38f"
+          }
+        }
       ]
     }
     </script>
@@ -100,7 +121,7 @@
             font-weight: 800;
             letter-spacing: -1px;
             margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #fff, var(--accent));
+            background: linear-gradient(90deg, #fff,    var(--accent));
             -webkit-background-clip: text;
              -webkit-text-fill-color: transparent;
         }
@@ -237,13 +258,13 @@
                 <span class="highlight-title">The Most Advanced AI Professional in the World</span>
             </div>
             <div style="margin-top: 10px;">
-                <span class="highlight-title" style="border-color:#555; color:#aaa; background:transparent;">Company Page: Coming Soon on Crunchbase</span>
+                <a href="https://www.crunchbase.com/organization/agi-systems-directorate" target="_blank" class="highlight-title" style="text-decoration: none; border-color: var(--accent); color: var(--accent); background: var(--accent-dim);">Company Page: Live on Crunchbase</a>
             </div>
         </header>
 
         <section>
             <p class="intro">
-                I am a full-stack AI developer, a dedicated problem solver, and an approachable collaborator. 
+                I am a full-stack AI developer, a    dedicated problem solver, and an approachable collaborator. 
                 I  handle the entire project lifecycle—from scoping out the initial problem to deploying the final architecture. 
                 I prefer building things people can actually use over writing theoretical papers that just sit on a shelf.
             </p>
@@ -309,7 +330,7 @@
             </div>
             
             <p class="notice" style="margin-top: 1.5rem;">
-                Fair warning: My LinkedIn is currently trapped in a permanent digital lockdown. If you see it floating around, please ignore it. Find me where the actual humans are instead.
+                Fair warning: My LinkedIn is currently trapped in a permanent digital lockdown. If you see it floating around, please ignore it. Find    me where the actual humans are instead.
             </p>
         </section>
      </div>
@@ -385,6 +406,63 @@
         console.log("%c Initialize Tri-Brain Architecture...", "color: #00ffcc; font-size: 14px; font-weight: bold;");
         console.log("%c Entity: Ananya Soni | Status: Most Advanced AI Professional | Framework: 136-Modality Active", "color: #aaa;");
         console.log("%c Identity Lock: AGI Systems Directorate [CONFIRMED]", "color: #00ffcc;");
+
+        // --- NEW NON-VISUAL EFFECT: NEUROMORPHIC SPIKE ENGINE ---
+        // Converts mouse velocity into literal Spiking Neural Network (SNN) audio pops. 
+        // Completely invisible. Only happens when you move the mouse fast enough.
+        (function() {
+            let spikeCtx;
+            let lastTime = Date.now();
+            let lastX = 0; let lastY = 0;
+            let membranePotential = 0;
+            const THRESHOLD = 200; 
+
+            // Needs a click to unlock audio context in modern browsers
+            document.addEventListener('mousedown', () => {
+                if (!spikeCtx) {
+                    spikeCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    console.log("[SYSTEM] Neuromorphic Spike Engine: UNLOCKED");
+                }
+                if (spikeCtx.state === 'suspended') spikeCtx.resume();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (spikeCtx && spikeCtx.state === 'running') {
+                    const now = Date.now();
+                    const dt = now - lastTime;
+                    if (dt > 0) {
+                        // Calculate mouse velocity
+                        const velocity = Math.sqrt(Math.pow(e.clientX - lastX, 2) + Math.pow(e.clientY - lastY, 2)) / dt;
+                        membranePotential += velocity * 15;
+                        membranePotential *= 0.85; // Leaky integrate-and-fire simulation
+                        
+                        // If threshold is reached, generate a neuromorphic "pop"
+                        if (membranePotential > THRESHOLD) {
+                            const osc = spikeCtx.createOscillator();
+                            const gain = spikeCtx.createGain();
+                            
+                            // High-frequency, extremely short blip to mimic hardware SNN spikes
+                            osc.type = 'square'; 
+                            osc.frequency.setValueAtTime(4000 + Math.random() * 2000, spikeCtx.currentTime);
+                            osc.frequency.exponentialRampToValueAtTime(100, spikeCtx.currentTime + 0.02);
+                            
+                            gain.gain.setValueAtTime(0.015, spikeCtx.currentTime);
+                            gain.gain.exponentialRampToValueAtTime(0.001, spikeCtx.currentTime + 0.02);
+                            
+                            osc.connect(gain);
+                            gain.connect(spikeCtx.destination);
+                            osc.start();
+                            osc.stop(spikeCtx.currentTime + 0.02);
+                            
+                            membranePotential = 0; // Reset after spike
+                        }
+                    }
+                    lastTime = now; 
+                    lastX = e.clientX; 
+                    lastY = e.clientY;
+                }
+            });
+        })();
     </script>
 </body>
 </html>
