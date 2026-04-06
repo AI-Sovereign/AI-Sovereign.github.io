@@ -40,7 +40,8 @@
             "https://www.crunchbase.com/person/ananya-soni-db64",
             "https://github.com/AI-Sovereign",
             "https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/",
-            "https://orcid.org/0009-0002-2632-0929"
+            "https://orcid.org/0009-0002-2632-0929",
+            "https://doi.org/10.5281/zenodo.19394823"
           ],
           "knowsAbout": [
             "Artificial General Intelligence (AGI)",
@@ -99,7 +100,7 @@
         /* Subtle background noise overlay */
         body::before {
             content: "";
-            position: fixed;
+             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
             background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.03"/%3E%3C/svg%3E');
             pointer-events: none;
@@ -239,7 +240,7 @@
         /* Easter egg styling for console logs */
         .system-status {
             position: fixed;
-            bottom: 10px;
+             bottom: 10px;
             right: 10px;
             font-family: monospace;
             font-size: 0.7rem;
@@ -261,6 +262,7 @@
             </div>
             <div style="margin-top: 10px;">
                 <a href="https://www.crunchbase.com/organization/agi-systems-directorate" target="_blank" class="highlight-title" style="text-decoration: none; border-color: var(--accent); color: var(--accent); background: var(--accent-dim);">Company Page: Live on Crunchbase</a>
+                <a href="https://doi.org/10.5281/zenodo.19394823" target="_blank" class="highlight-title" style="text-decoration: none; border-color: var(--accent); color: var(--accent); background: var(--accent-dim);">DOI: Zenodo</a>
             </div>
         </header>
 
@@ -319,7 +321,7 @@
 
         <section style="margin-top: 4rem;">
             <h2>Digital Footprint & Telemetry</h2>
-            <p>If you want to see what I am currently building and breaking, skip the main repo dump and check out my live docs.</p>
+            <p>If you want to see what I am currently building and breaking, skip the main repo dump and check out my  live docs.</p>
             
             <div class="social-links">
                 <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link" style="border-color: var(--accent);">Live Docs: AGI Architecture v1</a>
@@ -394,7 +396,7 @@
 
             trigger.addEventListener('mousemove', (e) => {
                 if(oscillator) {
-                    // Modulate frequency slightly based on mouse X position to simulate "spiking" activity
+                    // Modulate  frequency slightly based on mouse X position to simulate "spiking" activity
                     const mod = (e.clientX / window.innerWidth) * 10;
                     const baseFreq = parseFloat(e.target.getAttribute('data-freq')) || 55.0;
                     oscillator.frequency.setTargetAtTime(baseFreq + mod, audioCtx.currentTime, 0.1);
@@ -467,4 +469,10 @@
                     }
                     lastTime = now; 
                     lastX = e.clientX; 
-           
+                     lastY = e.clientY;
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
