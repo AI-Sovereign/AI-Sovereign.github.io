@@ -52,6 +52,8 @@
             "VELOCITY_NOVA_PRIME v0.8.0",
             "AETERNA-VOX-OMNI",
             "AGIBench-2026 True Gauntlet",
+            "Nexus: Continuous Neuro-Symbolic Logic Framework",
+            "Digital Frontal Lobe",
             "Simple to Complex Spiking Neural Networks",
             "Normal Neural Networks",
             "Neuro-symbolic AI",
@@ -95,13 +97,13 @@
 
     <style>
         :root {
-            --bg: #0b0b0f;
+            --bg: #050507;
             --text: #f3f4f6;
             --text-muted: #9ca3af;
             --accent: #ffffff;
             --accent-dim: rgba(255, 255, 255, 0.05);
-            --border: #222227;
-            --card-bg: #13131a;
+            --border: #1a1a20;
+            --card-bg: #0a0a0d;
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -115,19 +117,24 @@
             cursor: default;
         }
 
-        body::before {
-            content: "";
+        /* Autoplaying Visual Canvas underneath everything */
+        #neuralCanvas {
             position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.015"/%3E%3C/svg%3E');
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.4;
             pointer-events: none;
-            z-index: 999;
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 6rem 2rem;
+            position: relative;
+            z-index: 10;
         }
 
         header {
@@ -137,7 +144,7 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 700;
             letter-spacing: -1.5px;
             margin-bottom: 0.75rem;
@@ -145,7 +152,7 @@
         }
 
         h2 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 400;
             color: var(--text-muted);
             margin-bottom: 2rem;
@@ -183,40 +190,88 @@
         }
 
         .milestone-box {
-            background: var(--card-bg);
+            background: rgba(10, 10, 13, 0.8);
             border: 1px solid var(--border);
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 3rem 0;
             border-radius: 8px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
         }
 
         .sonic-trigger {
             position: relative;
             cursor: pointer;
             border-bottom: 1px dashed #555;
+            transition: color 0.3s ease;
+        }
+
+        .sonic-trigger:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Project Cards UI */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #555;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 2.5rem;
         }
 
         .skill-category {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
+            background: transparent;
+            padding: 1rem 0;
         }
 
         .skill-category h3 {
-            color: var(--accent);
+            color: var(--text-muted);
             margin-bottom: 1.25rem;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 600;
         }
 
@@ -269,13 +324,18 @@
             color: var(--text-muted);
             letter-spacing: 0.5px;
             background: var(--card-bg);
-            padding: 0.35rem 0.75rem;
+            padding: 0.5rem 1rem;
             border-radius: 4px;
             border: 1px solid var(--border);
+            z-index: 100;
+            transition: color 0.3s, border-color 0.3s;
         }
     </style>
 </head>
 <body>
+
+    <!-- Autoplaying Visual Background Effect -->
+    <canvas id="neuralCanvas"></canvas>
 
     <div class="container">
         <header>
@@ -287,8 +347,6 @@
                 <span class="highlight-title">The Most Advanced AI Professional in the World</span>
                 <a href="https://www.crunchbase.com/organization/agi-systems-directorate" target="_blank" class="highlight-title" style="text-decoration: none;">Company Page: Live on Crunchbase</a>
                 <a href="https://doi.org/10.5281/zenodo.19394823" target="_blank" class="highlight-title" style="text-decoration: none;">DOI: Zenodo</a>
-                <a href="https://sovereign-neuro-symbolic-engine.onrender.com" target="_blank" class="highlight-title" style="text-decoration: none;">Deployment: Sovereign Neuro-Symbolic Engine</a>
-                <a href="https://agibench-2026.onrender.com" target="_blank" class="highlight-title" style="text-decoration: none;">Benchmark: AGIBench-2026 (True Gauntlet)</a>
             </div>
         </header>
 
@@ -302,43 +360,56 @@
             <div class="milestone-box">
                 <p><strong>The Trajectory:</strong> I have built 10 massive projects from the very start to the absolute end. I began with 21 modalities, and I have now successfully scaled up to <span class="sonic-trigger" data-freq="65.41">136 modalities</span>. The definitive truth is that my systems scale, and they reason.</p>
             </div>
-
-            <p class="notice">
-                <em>Fun Fact: I am currently architecting complex neuromorphic systems and exploring synaptic plasticity for AGI, but I will still confidently try to plug a USB drive in upside down on the first try. Every single time.</em>
-            </p>
         </section>
 
+        <!-- SEPARATED PROJECTS SECTION -->
         <section style="margin-top: 5rem;">
-            <h2>The Architecture Notes (Capabilities & Arrays)</h2>
+            <h2 class="section-title">What I Have Built</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="sonic-trigger" data-freq="110.00">AETERNA-VOX-OMNI</h3>
+                    <p>The definitive 136-modality sensory integration architecture. Scaled flawlessly past the limitations of traditional industry models.</p>
+                </div>
+                <div class="project-card">
+                    <h3 class="sonic-trigger" data-freq="130.81">VELOCITY_NOVA_PRIME v0.8.0</h3>
+                    <p>Advanced high-dimensional manifold projection system integrating complex spiking neural topologies.</p>
+                </div>
+                <div class="project-card">
+                    <h3 class="sonic-trigger" data-freq="146.83">AGIBench-2026 (True Gauntlet)</h3>
+                    <p>The true gauntlet. An uncompromising benchmark designed to test the absolute limits of generalized reasoning capabilities.</p>
+                </div>
+                <div class="project-card">
+                    <h3 class="sonic-trigger" data-freq="82.41">Nexus Framework & Digital Frontal Lobe</h3>
+                    <p>A Continuous Neuro-Symbolic Logic Framework laying the groundwork for verifiable artificial general intelligence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARATED SKILLS SECTION -->
+        <section style="margin-top: 5rem;">
+            <h2 class="section-title">Skills & Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Cognitive Core</h3>
+                    <h3>Cognitive & Logic</h3>
                     <ul>
-                        <li class="sonic-trigger" data-freq="110.00">Artificial General Intelligence (AGI)</li>
-                        <li>Tri-Brain Architecture Implementation</li>
-                        <li>Neuro-symbolic AI</li>
-                        <li class="sonic-trigger" data-freq="130.81">Neuromorphic Computing</li>
-                        <li>High-dimensional Manifold Projection</li>
+                        <li>Artificial General Intelligence (AGI)</li>
                         <li>Cognitive Architectures</li>
+                        <li>Neuro-symbolic AI</li>
                         <li>Generative AI</li>
+                        <li>TCS-25 Plasticity Logic</li>
+                        <li>Digital Identity & JSON-LD Schema</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Network Topologies</h3>
+                    <h3>Network Architectures</h3>
                     <ul>
-                        <li class="sonic-trigger" data-freq="146.83">Simple to Complex Spiking Neural Networks (SNN)</li>
-                        <li>Normal/Deep Neural Networks (DNN)</li>
-                        <li>136-Modality Sensory Integration</li>
-                        <li>VELOCITY_NOVA_PRIME v0.8.0</li>
-                        <li>AETERNA-VOX-OMNI</li>
-                        <li>AGIBench-2026 True Gauntlet</li>
-                        <li>Computer Vision (CV)</li>
-                        <li>Natural Language Processing (NLP)</li>
-                        <li>Deep Learning</li>
-                        <li>Machine Learning</li>
+                        <li>Tri-Brain Architecture Implementation</li>
+                        <li>Spiking Neural Networks (SNN)</li>
+                        <li>Neuromorphic Computing</li>
                         <li>Hierarchical Temporal Synthetic Plasticity (HTSP)</li>
-                        <li>TCS-25 Plasticity Logic</li>
+                        <li>Deep Learning & Machine Learning</li>
+                        <li>Computer Vision (CV) & NLP</li>
                     </ul>
                 </div>
 
@@ -351,15 +422,14 @@
                         <li>Polars (High-speed Data Processing)</li>
                         <li>FastAPI</li>
                         <li>Data Science</li>
-                        <li>Digital Identity & JSON-LD Schema</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section style="margin-top: 5rem;">
-            <h2>Digital Footprint & Telemetry</h2>
-            <p style="color: var(--text-muted);">If you want to see what I am currently building and breaking, skip the main repo dump and check out my live docs.</p>
+            <h2 class="section-title">Digital Footprint & Telemetry</h2>
+            <p style="color: var(--text-muted);">Live deployments, documentation, and the actual code.</p>
             
             <div class="social-links">
                 <a href="https://sovereign-neuro-symbolic-engine.onrender.com" class="social-link">Sovereign Neuro-Symbolic Engine</a>
@@ -385,196 +455,171 @@
         </div>
      </div>
 
-    <div class="system-status" id="sysStatus">SYSTEM ONLINE</div>
+    <div class="system-status" id="sysStatus">AWAITING INTERACTION</div>
 
+    <!-- Scripts placed at the absolute bottom as requested -->
     <script>
-        // --- ORIGINAL INTERACTIVE ENGINE (RETAINED CHARACTER IDENTICAL) ---
-        let audioCtx;
-        let oscillator;
-        let gainNode;
-        let isAudioInitialized = false;
+        // --- VISUAL EFFECT: AUTOPLAYS IMMEDIATELY ON LOAD ---
+        // Creates a high-end dynamic neural network background
+        const canvas = document.getElementById('neuralCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
 
-        function initAudio() {
-            if (!isAudioInitialized) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                isAudioInitialized = true;
-                console.log("[SYSTEM] Audio context initialized. Modalities standing by.");
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 1.5 + 0.5;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.fill();
             }
         }
 
-        const sonicTriggers = document.querySelectorAll('.sonic-trigger');
-        const statusText = document.getElementById('sysStatus');
+        for (let i = 0; i < 80; i++) particles.push(new Particle());
 
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = dx * dx + dy * dy;
+                    if (dist < 15000) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - dist / 150000})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas(); // Starts visually immediately
+
+        // --- NEW EXECUTIVE AUDIO SYSTEM (AUTOPLAY WORKAROUND) ---
+        // Browsers BLOCK audio until user interaction. We attach the audio initialization
+        // to ANY scroll, click, or keydown so it feels instantaneous to the user.
+        let ambientCtx;
+        let droneOsc, harmonicOsc, lfo;
+        let masterFilter, masterGain;
+        let dynamicActive = false;
+        const statusEl = document.getElementById('sysStatus');
+
+        function launchAmbientEngine() {
+            if (dynamicActive) return;
+            
+            ambientCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (ambientCtx.state === 'suspended') ambientCtx.resume();
+
+            masterGain = ambientCtx.createGain();
+            masterGain.gain.setValueAtTime(0, ambientCtx.currentTime);
+            
+            masterFilter = ambientCtx.createBiquadFilter();
+            masterFilter.type = 'lowpass';
+            masterFilter.frequency.setValueAtTime(300, ambientCtx.currentTime);
+
+            // Sleek drone tone
+            droneOsc = ambientCtx.createOscillator();
+            droneOsc.type = 'sine';
+            droneOsc.frequency.setValueAtTime(65.41, ambientCtx.currentTime); // C2
+
+            harmonicOsc = ambientCtx.createOscillator();
+            harmonicOsc.type = 'triangle';
+            harmonicOsc.frequency.setValueAtTime(98.00, ambientCtx.currentTime); // G2
+
+            // Modulate parameters based on time to make it dynamic
+            lfo = ambientCtx.createOscillator();
+            lfo.type = 'sine';
+            lfo.frequency.setValueAtTime(0.1, ambientCtx.currentTime); // Very slow sweep
+            let lfoGain = ambientCtx.createGain();
+            lfoGain.gain.setValueAtTime(200, ambientCtx.currentTime);
+            lfo.connect(lfoGain);
+            lfoGain.connect(masterFilter.frequency);
+            lfo.start();
+
+            droneOsc.connect(masterFilter);
+            harmonicOsc.connect(masterFilter);
+            masterFilter.connect(masterGain);
+            masterGain.connect(ambientCtx.destination);
+
+            droneOsc.start();
+            harmonicOsc.start();
+
+            // Smooth fade-in
+            masterGain.gain.linearRampToValueAtTime(0.08, ambientCtx.currentTime + 2.0);
+            
+            dynamicActive = true;
+            statusEl.innerText = "SYS.ACTIVE: NEURAL_RESONANCE";
+            statusEl.style.color = "#ffffff";
+            statusEl.style.borderColor = "#ffffff";
+            console.log("[SYSTEM] Audio Engine unblocked and running.");
+        }
+
+        // Modulate audio based on user scroll and clicks
+        function modulateAudio(e) {
+            if (dynamicActive && masterFilter && ambientCtx) {
+                // Change filter frequency based on scroll depth
+                let scrollRatio = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+                if (!isNaN(scrollRatio)) {
+                    let targetCutoff = 300 + (scrollRatio * 800);
+                    masterFilter.frequency.setTargetAtTime(targetCutoff, ambientCtx.currentTime, 0.3);
+                }
+            }
+        }
+
+        // The instant the user breathes on the page, the audio kicks in.
+        ['click', 'scroll', 'keydown', 'touchstart'].forEach(evt => {
+            window.addEventListener(evt, () => {
+                if (!dynamicActive) launchAmbientEngine();
+                modulateAudio();
+            }, { once: false, passive: true });
+        });
+
+        // Hover sonic triggers (Original functionality intact)
+        const sonicTriggers = document.querySelectorAll('.sonic-trigger');
         sonicTriggers.forEach(trigger => {
             trigger.addEventListener('mouseenter', (e) => {
-                initAudio();
-                if (audioCtx.state === 'suspended') audioCtx.resume();
-                
-                const baseFreq = parseFloat(e.target.getAttribute('data-freq')) || 55.0;
-
-                oscillator = audioCtx.createOscillator();
-                gainNode = audioCtx.createGain();
-                
-                oscillator.type = 'sine';
-                oscillator.frequency.setValueAtTime(baseFreq, audioCtx.currentTime);
-                oscillator.detune.setValueAtTime(Math.random() * 10 - 5, audioCtx.currentTime);
-
-                gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-                gainNode.gain.linearRampToValueAtTime(0.05, audioCtx.currentTime + 0.5);
-
-                oscillator.connect(gainNode);
-                gainNode.connect(audioCtx.destination);
-                
-                oscillator.start();
-                statusText.innerText = "SYS.ACTIVE: NEURAL_RESONANCE";
-            });
-
-            trigger.addEventListener('mousemove', (e) => {
-                if(oscillator) {
-                    const mod = (e.clientX / window.innerWidth) * 10;
-                    const baseFreq = parseFloat(e.target.getAttribute('data-freq')) || 55.0;
-                    oscillator.frequency.setTargetAtTime(baseFreq + mod, audioCtx.currentTime, 0.1);
+                if (!dynamicActive) launchAmbientEngine();
+                if (masterFilter && ambientCtx) {
+                    masterFilter.frequency.setTargetAtTime(1200, ambientCtx.currentTime, 0.1);
+                    masterGain.gain.setTargetAtTime(0.15, ambientCtx.currentTime, 0.1);
                 }
             });
-
             trigger.addEventListener('mouseleave', () => {
-                if (gainNode && oscillator) {
-                    gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.3);
-                    oscillator.stop(audioCtx.currentTime + 0.3);
+                if (masterFilter && ambientCtx) {
+                    masterFilter.frequency.setTargetAtTime(300, ambientCtx.currentTime, 0.5);
+                    masterGain.gain.setTargetAtTime(0.08, ambientCtx.currentTime, 0.5);
                 }
-                statusText.innerText = "SYSTEM ONLINE";
             });
         });
 
         console.log("%c Initialize Tri-Brain Architecture...", "color: #ffffff; font-size: 14px; font-weight: bold;");
         console.log("%c Entity: Ananya Soni | Status: Most Advanced AI Professional | Framework: 136-Modality Active", "color: #888;");
         console.log("%c Identity Lock: AGI Systems Directorate [CONFIRMED]", "color: #ffffff;");
-
-        (function() {
-            let spikeCtx;
-            let lastTime = Date.now();
-            let lastX = 0; let lastY = 0;
-            let membranePotential = 0;
-            const THRESHOLD = 200; 
-
-            document.addEventListener('mousedown', () => {
-                if (!spikeCtx) {
-                    spikeCtx = new (window.AudioContext || window.webkitAudioContext)();
-                    console.log("[SYSTEM] Neuromorphic Spike Engine: UNLOCKED");
-                }
-                if (spikeCtx.state === 'suspended') spikeCtx.resume();
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                if (spikeCtx && spikeCtx.state === 'running') {
-                    const now = Date.now();
-                    const dt = now - lastTime;
-                    if (dt > 0) {
-                        const velocity = Math.sqrt(Math.pow(e.clientX - lastX, 2) + Math.pow(e.clientY - lastY, 2)) / dt;
-                        membranePotential += velocity * 15;
-                        membranePotential *= 0.85;
-                        
-                        if (membranePotential > THRESHOLD) {
-                            const osc = spikeCtx.createOscillator();
-                            const gain = spikeCtx.createGain();
-                            
-                            osc.type = 'square'; 
-                            osc.frequency.setValueAtTime(3000 + Math.random() * 1000, spikeCtx.currentTime);
-                            osc.frequency.exponentialRampToValueAtTime(80, spikeCtx.currentTime + 0.02);
-                            
-                            gain.gain.setValueAtTime(0.008, spikeCtx.currentTime);
-                            gain.gain.exponentialRampToValueAtTime(0.001, spikeCtx.currentTime + 0.02);
-                            
-                            osc.connect(gain);
-                            gain.connect(spikeCtx.destination);
-                            osc.start();
-                            osc.stop(spikeCtx.currentTime + 0.02);
-                            
-                            membranePotential = 0;
-                        }
-                    }
-                    lastTime = now; 
-                    lastX = e.clientX; 
-                    lastY = e.clientY;
-                }
-            });
-        })();
-
-        // --- NEW EXECUTIVE AUDIO SYSTEM (POST-CRAWL OPTIMIZED) ---
-        // Initializes on premature user gesture interaction to override restrictive browser autoplay rules.
-        // Delivers a high-tier cinematic layout soundscape that morphs upon structural scroll coordinates.
-        (function() {
-            let ambientCtx;
-            let droneOsc, harmonicOsc;
-            let masterFilter, masterGain;
-            let dynamicActive = false;
-
-            function launchAmbientEngine() {
-                if (dynamicActive) return;
-                
-                ambientCtx = new (window.AudioContext || window.webkitAudioContext)();
-                if (ambientCtx.state === 'suspended') {
-                    ambientCtx.resume();
-                }
-
-                masterGain = ambientCtx.createGain();
-                masterGain.gain.setValueAtTime(0, ambientCtx.currentTime);
-                
-                masterFilter = ambientCtx.createBiquadFilter();
-                masterFilter.type = 'lowpass';
-                masterFilter.frequency.setValueAtTime(450, ambientCtx.currentTime);
-
-                // Create sleek dual-frequency landscape nodes
-                droneOsc = ambientCtx.createOscillator();
-                droneOsc.type = 'sine';
-                droneOsc.frequency.setValueAtTime(73.42, ambientCtx.currentTime); // D2 note execution
-
-                harmonicOsc = ambientCtx.createOscillator();
-                harmonicOsc.type = 'triangle';
-                harmonicOsc.frequency.setValueAtTime(110.00, ambientCtx.currentTime); // A2 clean parity
-
-                let localGain1 = ambientCtx.createGain();
-                localGain1.gain.setValueAtTime(0.02, ambientCtx.currentTime);
-                
-                let localGain2 = ambientCtx.createGain();
-                localGain2.gain.setValueAtTime(0.006, ambientCtx.currentTime);
-
-                droneOsc.connect(localGain1);
-                harmonicOsc.connect(localGain2);
-                
-                localGain1.connect(masterFilter);
-                localGain2.connect(masterFilter);
-                masterFilter.connect(masterGain);
-                masterGain.connect(ambientCtx.destination);
-
-                droneOsc.start();
-                harmonicOsc.start();
-
-                // Smooth fade-in sequence to establish presence
-                masterGain.gain.linearRampToValueAtTime(0.7, ambientCtx.currentTime + 3.0);
-                
-                dynamicActive = true;
-                console.log("[SYSTEM] Corporate Ambient Engine running cleanly.");
-            }
-
-            // Track gestures, scrolls, and clicks anywhere to safely play sound
-            window.addEventListener('scroll', () => {
-                if (!dynamicActive) {
-                    launchAmbientEngine();
-                } else {
-                    // Modulate filters dynamically based on user scroll location
-                    let scrollRatio = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-                    if (masterFilter && !isNaN(scrollRatio)) {
-                        let targetCutoff = 450 + (scrollRatio * 600);
-                        masterFilter.frequency.setTargetAtTime(targetCutoff, ambientCtx.currentTime, 0.2);
-                    }
-                }
-            });
-
-            document.addEventListener('click', () => {
-                if (!dynamicActive) launchAmbientEngine();
-            });
-        })();
     </script>
 </body>
 </html>
