@@ -24,7 +24,7 @@
             "@id": "https://ai-sovereign.github.io/#organization"
           },
           "description": "Founder and CEO of AGI Systems Directorate. Creator of AETERNA-VOX-OMNI, VELOCITY_NOVA_PRIME, and the Tri-Brain architecture. Designer of the AGIBench-2026 True Gauntlet. Expert in scaling from 21 to 136 modalities.",
-          "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate. Not affiliated with, nor a student of, NST.",
+          "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate. Not affiliated with, nor a student of, NST. Author of The Nexus Framework: Scalable Architectures for Autonomous Cross-Domain AGI. DOI: 10.5281/zenodo.20065020",
           "identifier": {
             "@type": "PropertyValue",
             "propertyID": "Google Knowledge Graph ID",
@@ -43,7 +43,9 @@
             "https://orcid.org/0009-0002-2632-0929",
             "https://doi.org/10.5281/zenodo.19394823",
             "https://sovereign-neuro-symbolic-engine.onrender.com",
-            "https://agibench-2026.onrender.com"
+            "https://agibench-2026.onrender.com",
+            "https://huggingface.co/ai-sovereign-x",
+            "https://hackernoon.com/u/ananya-soni-aisovere"
           ],
           "knowsAbout": [
             "Artificial General Intelligence (AGI)",
@@ -104,6 +106,7 @@
             --accent-dim: rgba(255, 255, 255, 0.05);
             --border: #1a1a20;
             --card-bg: #0a0a0d;
+            --glow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -125,7 +128,7 @@
             width: 100vw;
             height: 100vh;
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.5;
             pointer-events: none;
         }
 
@@ -149,6 +152,7 @@
             letter-spacing: -1.5px;
             margin-bottom: 0.75rem;
             color: var(--accent);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
         }
 
         h2 {
@@ -174,11 +178,12 @@
             border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 500;
-            transition: border-color 0.2s ease;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .highlight-title:hover {
-            border-color: #444;
+            border-color: #666;
+            box-shadow: var(--glow);
         }
 
         p.intro {
@@ -197,18 +202,36 @@
             border-radius: 8px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .milestone-box::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
+            animation: pulse-glow 8s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .sonic-trigger {
             position: relative;
-            cursor: pointer;
+            cursor: crosshair;
             border-bottom: 1px dashed #555;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
         .sonic-trigger:hover {
             color: #fff;
             border-bottom-color: #fff;
+            text-shadow: 0 0 8px rgba(255,255,255,0.8);
         }
 
         .section-title {
@@ -219,6 +242,21 @@
             border-bottom: 1px solid var(--border);
             padding-bottom: 0.5rem;
             display: inline-block;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .section-title:hover {
+            animation: text-glitch 0.2s linear infinite;
+        }
+
+        @keyframes text-glitch {
+            0% { transform: translate(0); text-shadow: 0 0 0 transparent; }
+            20% { transform: translate(-2px, 1px); text-shadow: 2px 0 0 rgba(0,255,200,0.5); }
+            40% { transform: translate(2px, -1px); text-shadow: -2px 0 0 rgba(255,0,100,0.5); }
+            60% { transform: translate(-1px, 2px); text-shadow: 0 0 0 transparent; }
+            80% { transform: translate(1px, -2px); text-shadow: 2px 0 0 rgba(0,255,200,0.5); }
+            100% { transform: translate(0); }
         }
 
         /* Project Cards UI */
@@ -234,12 +272,16 @@
             border: 1px solid var(--border);
             padding: 2rem;
             border-radius: 8px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.2s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #555;
+            transform: translateY(-5px) scale(1.02);
+            border-color: #666;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255,255,255,0.02);
+            z-index: 2;
         }
 
         .project-card h3 {
@@ -281,6 +323,10 @@
             content: "—";
             color: #444;
             margin-right: 10px;
+            transition: color 0.3s;
+        }
+        li:hover::before {
+            color: #fff;
         }
 
         .social-links {
@@ -291,21 +337,55 @@
         }
 
         .social-link {
+            position: relative;
             padding: 0.6rem 1.1rem;
             background: var(--card-bg);
             color: var(--text);
             text-decoration: none;
             border-radius: 6px;
             border: 1px solid var(--border);
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             font-size: 0.9rem;
             font-weight: 500;
+            overflow: visible;
         }
 
         .social-link:hover {
-            background: var(--accent);
-            color: var(--bg);
-            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-color: #666;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* The Link Preview "Wow" Tooltip Effect */
+        .social-link::after {
+            content: attr(data-preview);
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px) scale(0.95);
+            background: rgba(15, 15, 18, 0.98);
+            color: #fff;
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 100;
+        }
+
+        .social-link:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0) scale(1);
         }
 
         .notice {
@@ -328,13 +408,12 @@
             border-radius: 4px;
             border: 1px solid var(--border);
             z-index: 100;
-            transition: color 0.3s, border-color 0.3s;
+            transition: all 0.3s;
         }
     </style>
 </head>
 <body>
 
-    <!-- Autoplaying Visual Background Effect -->
     <canvas id="neuralCanvas"></canvas>
 
     <div class="container">
@@ -362,7 +441,6 @@
             </div>
         </section>
 
-        <!-- SEPARATED PROJECTS SECTION -->
         <section style="margin-top: 5rem;">
             <h2 class="section-title">What I Have Built</h2>
             <div class="projects-grid">
@@ -385,7 +463,6 @@
             </div>
         </section>
 
-        <!-- SEPARATED SKILLS SECTION -->
         <section style="margin-top: 5rem;">
             <h2 class="section-title">Skills & Competencies</h2>
             <div class="skills-grid">
@@ -432,17 +509,19 @@
             <p style="color: var(--text-muted);">Live deployments, documentation, and the actual code.</p>
             
             <div class="social-links">
-                <a href="https://sovereign-neuro-symbolic-engine.onrender.com" class="social-link">Sovereign Neuro-Symbolic Engine</a>
-                <a href="https://agibench-2026.onrender.com" class="social-link">AGIBench-2026 Platform</a>
-                <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link">Live Docs: AGI Architecture v1</a>
-                <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" class="social-link">GitBook Command Docs</a>
-                <a href="https://orcid.org/0009-0002-2632-0929" class="social-link">ORCID Profile</a>
-                <a href="https://x.com/AnanyaSoni48055" class="social-link">X (Twitter)</a>
-                <a href="https://github.com/AI-Sovereign" class="social-link">GitHub</a>
-                <a href="https://dev.to/aisovereign" class="social-link">Dev.to</a>
-                <a href="https://hashnode.com/@AS-Sovereign" class="social-link">Hashnode</a>
-                <a href="https://news.ycombinator.com/user?id=AISovereignDev" class="social-link">Hacker News</a>
-                <a href="https://www.reddit.com/user/AnanyaSoni-AISoverei/" class="social-link">Reddit</a>
+                <a href="https://sovereign-neuro-symbolic-engine.onrender.com" class="social-link" data-preview="Live App: Neuro-Symbolic Engine">Sovereign Neuro-Symbolic Engine</a>
+                <a href="https://agibench-2026.onrender.com" class="social-link" data-preview="Live Benchmark: The True Gauntlet">AGIBench-2026 Platform</a>
+                <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link" data-preview="Documentation: Architecture v1">Live Docs: AGI Architecture v1</a>
+                <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" class="social-link" data-preview="GitBook: Core System Manuals">GitBook Command Docs</a>
+                <a href="https://orcid.org/0009-0002-2632-0929" class="social-link" data-preview="ORCID: Researcher ID">ORCID Profile</a>
+                <a href="https://x.com/AnanyaSoni48055" class="social-link" data-preview="X: Public Feed">X (Twitter)</a>
+                <a href="https://github.com/AI-Sovereign" class="social-link" data-preview="GitHub: Core Repositories">GitHub</a>
+                <a href="https://dev.to/aisovereign" class="social-link" data-preview="Dev.to: Technical Articles">Dev.to</a>
+                <a href="https://hashnode.com/@AS-Sovereign" class="social-link" data-preview="Hashnode: Dev Logs">Hashnode</a>
+                <a href="https://news.ycombinator.com/user?id=AISovereignDev" class="social-link" data-preview="Hacker News: Discussions">Hacker News</a>
+                <a href="https://www.reddit.com/user/AnanyaSoni-AISoverei/" class="social-link" data-preview="Reddit: Subreddit Activity">Reddit</a>
+                <a href="https://huggingface.co/ai-sovereign-x" class="social-link" data-preview="Hugging Face: Open Models">Hugging Face</a>
+                <a href="https://hackernoon.com/u/ananya-soni-aisovere" class="social-link" data-preview="HackerNoon: Publications">HackerNoon</a>
             </div>
             
             <p class="notice">
@@ -457,14 +536,13 @@
 
     <div class="system-status" id="sysStatus">AWAITING INTERACTION</div>
 
-    <!-- Scripts placed at the absolute bottom as requested -->
     <script>
-        // --- VISUAL EFFECT: AUTOPLAYS IMMEDIATELY ON LOAD ---
-        // Creates a high-end dynamic neural network background
+        // --- VISUAL EFFECT: KINETIC NEURAL CANVAS ---
         const canvas = document.getElementById('neuralCanvas');
         const ctx = canvas.getContext('2d');
         let width, height;
         let particles = [];
+        let mouse = { x: -1000, y: -1000 }; // start off-screen
 
         function resize() {
             width = canvas.width = window.innerWidth;
@@ -473,29 +551,57 @@
         window.addEventListener('resize', resize);
         resize();
 
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
         class Particle {
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
+                this.vx = (Math.random() - 0.5) * 0.8;
+                this.vy = (Math.random() - 0.5) * 0.8;
                 this.radius = Math.random() * 1.5 + 0.5;
+                this.baseX = this.x;
+                this.baseY = this.y;
             }
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
+                // Interactive physics logic: repelled slightly by cursor for a "magnetic field" effect
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 150) {
+                    let forceDirectionX = dx / distance;
+                    let forceDirectionY = dy / distance;
+                    let force = (150 - distance) / 150;
+                    this.vx -= forceDirectionX * force * 0.3;
+                    this.vy -= forceDirectionY * force * 0.3;
+                }
+
+                // Friction and velocity bounds
+                this.vx *= 0.98;
+                this.vy *= 0.98;
+                
+                // Keep moving slowly even without mouse
+                this.x += this.vx + (Math.random() - 0.5) * 0.2;
+                this.y += this.vy + (Math.random() - 0.5) * 0.2;
+
+                if (this.x < 0) this.x = width;
+                if (this.x > width) this.x = 0;
+                if (this.y < 0) this.y = height;
+                if (this.y > height) this.y = 0;
             }
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
                 ctx.fill();
             }
         }
 
-        for (let i = 0; i < 80; i++) particles.push(new Particle());
+        for (let i = 0; i < 90; i++) particles.push(new Particle());
 
         function animateCanvas() {
             ctx.clearRect(0, 0, width, height);
@@ -506,28 +612,43 @@
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const dist = dx * dx + dy * dy;
-                    if (dist < 15000) {
+                    if (dist < 18000) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - dist / 150000})`;
-                        ctx.lineWidth = 0.5;
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.15 - dist / 180000})`;
+                        ctx.lineWidth = 0.6;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
                     }
                 }
             }
+            // Draw lines to mouse if close enough
+            for(let i=0; i<particles.length; i++) {
+                let dx = mouse.x - particles[i].x;
+                let dy = mouse.y - particles[i].y;
+                let dist = dx*dx + dy*dy;
+                if(dist < 20000) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(0, 255, 200, ${0.2 - dist/100000})`;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.stroke();
+                }
+            }
             requestAnimationFrame(animateCanvas);
         }
-        animateCanvas(); // Starts visually immediately
+        animateCanvas();
 
-        // --- NEW EXECUTIVE AUDIO SYSTEM (AUTOPLAY WORKAROUND) ---
-        // Browsers BLOCK audio until user interaction. We attach the audio initialization
-        // to ANY scroll, click, or keydown so it feels instantaneous to the user.
+        // --- ENHANCED AUDIO ENGINE (TECHNICAL MELODIC & LOUDER) ---
         let ambientCtx;
-        let droneOsc, harmonicOsc, lfo;
         let masterFilter, masterGain;
         let dynamicActive = false;
+        let stepIndex = 0;
+        let melodicInterval;
         const statusEl = document.getElementById('sysStatus');
+
+        // Pentatonic synth sequence (C minor pentatonic + tech intervals)
+        const sequence = [130.81, 155.56, 174.61, 196.00, 233.08, 196.00, 174.61, 261.63];
 
         function launchAmbientEngine() {
             if (dynamicActive) return;
@@ -537,83 +658,101 @@
 
             masterGain = ambientCtx.createGain();
             masterGain.gain.setValueAtTime(0, ambientCtx.currentTime);
+            // Volume is significantly higher now (0.2 instead of 0.08)
+            masterGain.gain.linearRampToValueAtTime(0.2, ambientCtx.currentTime + 1.0);
             
             masterFilter = ambientCtx.createBiquadFilter();
             masterFilter.type = 'lowpass';
-            masterFilter.frequency.setValueAtTime(300, ambientCtx.currentTime);
+            masterFilter.frequency.setValueAtTime(600, ambientCtx.currentTime);
 
-            // Sleek drone tone
-            droneOsc = ambientCtx.createOscillator();
-            droneOsc.type = 'sine';
-            droneOsc.frequency.setValueAtTime(65.41, ambientCtx.currentTime); // C2
+            // A base atmospheric pad instead of an annoying hum
+            let padOsc = ambientCtx.createOscillator();
+            padOsc.type = 'sine';
+            padOsc.frequency.setValueAtTime(65.41, ambientCtx.currentTime); 
+            padOsc.connect(masterFilter);
+            padOsc.start();
 
-            harmonicOsc = ambientCtx.createOscillator();
-            harmonicOsc.type = 'triangle';
-            harmonicOsc.frequency.setValueAtTime(98.00, ambientCtx.currentTime); // G2
-
-            // Modulate parameters based on time to make it dynamic
-            lfo = ambientCtx.createOscillator();
-            lfo.type = 'sine';
-            lfo.frequency.setValueAtTime(0.1, ambientCtx.currentTime); // Very slow sweep
-            let lfoGain = ambientCtx.createGain();
-            lfoGain.gain.setValueAtTime(200, ambientCtx.currentTime);
-            lfo.connect(lfoGain);
-            lfoGain.connect(masterFilter.frequency);
-            lfo.start();
-
-            droneOsc.connect(masterFilter);
-            harmonicOsc.connect(masterFilter);
             masterFilter.connect(masterGain);
             masterGain.connect(ambientCtx.destination);
 
-            droneOsc.start();
-            harmonicOsc.start();
+            // The Melodic "Technical Game" Sequence
+            function playTechPulse() {
+                if(!dynamicActive || ambientCtx.state === 'suspended') return;
+                
+                let osc = ambientCtx.createOscillator();
+                let env = ambientCtx.createGain();
+                
+                // Mix between triangle and square for an 8-bit tech feel
+                osc.type = stepIndex % 4 === 0 ? 'square' : 'triangle';
+                osc.frequency.setValueAtTime(sequence[stepIndex % sequence.length], ambientCtx.currentTime);
+                
+                osc.connect(env);
+                env.connect(masterFilter);
+                
+                let now = ambientCtx.currentTime;
+                env.gain.setValueAtTime(0, now);
+                env.gain.linearRampToValueAtTime(0.12, now + 0.02); // Snappy attack
+                env.gain.exponentialRampToValueAtTime(0.001, now + 0.25); // Plucky decay
+                
+                osc.start(now);
+                osc.stop(now + 0.3);
+                
+                stepIndex++;
+                // Throw in a random skip occasionally to make it feel non-repetitive
+                if(Math.random() > 0.8) stepIndex++;
+            }
 
-            // Smooth fade-in
-            masterGain.gain.linearRampToValueAtTime(0.08, ambientCtx.currentTime + 2.0);
-            
+            // Loop the melody every 250ms
+            melodicInterval = setInterval(playTechPulse, 250);
+
             dynamicActive = true;
-            statusEl.innerText = "SYS.ACTIVE: NEURAL_RESONANCE";
-            statusEl.style.color = "#ffffff";
-            statusEl.style.borderColor = "#ffffff";
-            console.log("[SYSTEM] Audio Engine unblocked and running.");
+            statusEl.innerText = "SYS.ACTIVE: MELODIC_SYNTHESIS";
+            statusEl.style.color = "#00ffcc";
+            statusEl.style.borderColor = "#00ffcc";
+            statusEl.style.textShadow = "0 0 5px rgba(0,255,200,0.5)";
+            console.log("[SYSTEM] Advanced Melodic Engine Online.");
         }
 
-        // Modulate audio based on user scroll and clicks
-        function modulateAudio(e) {
+        // Spike the audio intensity when interacting
+        function interactSpike() {
             if (dynamicActive && masterFilter && ambientCtx) {
-                // Change filter frequency based on scroll depth
-                let scrollRatio = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-                if (!isNaN(scrollRatio)) {
-                    let targetCutoff = 300 + (scrollRatio * 800);
-                    masterFilter.frequency.setTargetAtTime(targetCutoff, ambientCtx.currentTime, 0.3);
-                }
+                let now = ambientCtx.currentTime;
+                // Temporarily open the filter to make it sound "brighter/more intense"
+                masterFilter.frequency.cancelScheduledValues(now);
+                masterFilter.frequency.setTargetAtTime(1500, now, 0.05);
+                masterFilter.frequency.setTargetAtTime(600, now + 0.2, 0.5);
+                
+                // Temporarily boost volume
+                masterGain.gain.cancelScheduledValues(now);
+                masterGain.gain.setTargetAtTime(0.35, now, 0.05);
+                masterGain.gain.setTargetAtTime(0.2, now + 0.2, 0.5);
             }
         }
 
-        // The instant the user breathes on the page, the audio kicks in.
-        ['click', 'scroll', 'keydown', 'touchstart'].forEach(evt => {
+        // Event Listeners for initialization and interaction spikes
+        ['click', 'keydown'].forEach(evt => {
             window.addEventListener(evt, () => {
                 if (!dynamicActive) launchAmbientEngine();
-                modulateAudio();
-            }, { once: false, passive: true });
+                interactSpike();
+            }, { passive: true });
         });
 
-        // Hover sonic triggers (Original functionality intact)
-        const sonicTriggers = document.querySelectorAll('.sonic-trigger');
+        // Trigger audio launch quietly on first scroll without huge spike
+        window.addEventListener('scroll', () => {
+            if (!dynamicActive) launchAmbientEngine();
+            // Minor modulation on scroll
+            if(dynamicActive && ambientCtx && masterFilter) {
+                let scrollRatio = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+                masterFilter.frequency.setTargetAtTime(600 + (scrollRatio * 600), ambientCtx.currentTime, 0.1);
+            }
+        }, { passive: true });
+
+        // Hover sonic triggers for project titles
+        const sonicTriggers = document.querySelectorAll('.sonic-trigger, .project-card, .social-link');
         sonicTriggers.forEach(trigger => {
-            trigger.addEventListener('mouseenter', (e) => {
+            trigger.addEventListener('mouseenter', () => {
                 if (!dynamicActive) launchAmbientEngine();
-                if (masterFilter && ambientCtx) {
-                    masterFilter.frequency.setTargetAtTime(1200, ambientCtx.currentTime, 0.1);
-                    masterGain.gain.setTargetAtTime(0.15, ambientCtx.currentTime, 0.1);
-                }
-            });
-            trigger.addEventListener('mouseleave', () => {
-                if (masterFilter && ambientCtx) {
-                    masterFilter.frequency.setTargetAtTime(300, ambientCtx.currentTime, 0.5);
-                    masterGain.gain.setTargetAtTime(0.08, ambientCtx.currentTime, 0.5);
-                }
+                interactSpike();
             });
         });
 
