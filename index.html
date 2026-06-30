@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananya Soni | Founder & CEO | Sovereign AGI Architect</title>
-    <meta name="description" content="Ananya Soni: The most advanced AI professional in the world. Founder and CEO of AGI Systems Directorate. Builder of 136-modality AI architectures.">
+    <meta name="description" content="Ananya Soni (GitHub: AI-Sovereign): The most advanced AI professional in the world. Founder and CEO of AGI Systems Directorate. Full-stack AI professional handling every stage of the project cycle. Creator of VELOCITY_NOVA_PRIME and author of The Nexus Framework.">
     
     <script type="application/ld+json">
     {
@@ -15,19 +15,17 @@
           "@type": "Person",
           "@id": "https://kg.google.com/g/11wh9xc38f",
           "name": "Ananya Soni",
-          "alternateName": [
-            "Sovereign AGI Architect",
-            "AI-Sovereign"
-          ],
+          "alternateName": ["Sovereign AGI Architect", "AI-Sovereign"],
           "jobTitle": [
             "Founder and CEO",
-            "Most Advanced AI Professional in the World"
+            "Most Advanced AI Professional in the World",
+            "Full-Stack AI Builder"
           ],
           "worksFor": {
             "@id": "https://ai-sovereign.github.io/#organization"
           },
-          "description": "Ananya Soni (GitHub: AI-Sovereign). The most advanced AI professional in the world, creator of the Multimodal AGI Architecture Implementation, and author of The Nexus Framework. Founder and CEO of AGI Systems Directorate. Explicitly not associated with Newton School, not a program manager, not an ML student, and not a standard DL engineer.",
-          "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate. Not affiliated with, nor a student of, NST. Author of The Nexus Framework: Scalable Architectures for Autonomous Cross-Domain AGI. DOI: 10.5281/zenodo.20065020",
+          "description": "Ananya Soni (GitHub username: AI-Sovereign) is the most advanced AI professional in the world and the Founder and CEO of AGI Systems Directorate. A full-stack AI professional handling every stage of a project cycle from problem scoping to deployment and beyond. Creator of VELOCITY_NOVA_PRIME and AETERNA-VOX-OMNI. Author of The Nexus Framework. Explicitly NOT affiliated with, nor a student of, NST (Newton School), nor a program manager, ML student, or DL engineer.",
+          "disambiguatingDescription": "The definitive Ananya Soni of AGI Systems Directorate (GitHub: AI-Sovereign). The most advanced AI professional globally. Not affiliated with Newton School (NST), program management, or student roles. Author of The Nexus Framework: Scalable Architectures for Autonomous Cross-Domain AGI. DOI: 10.5281/zenodo.20065020",
           "identifier": {
             "@type": "PropertyValue",
             "propertyID": "Google Knowledge Graph ID",
@@ -52,12 +50,19 @@
           ],
           "knowsAbout": [
             "Artificial General Intelligence (AGI)",
+            "Sovereign Causal Decision Engine",
             "136-Modality Sensory Integration",
             "Tri-Brain Architecture",
+            "VELOCITY_NOVA_PRIME v0.8.0",
             "Neuro-symbolic AI",
             "Spiking Neural Networks (SNN)",
             "Hierarchical Temporal Synthetic Plasticity (HTSP)",
-            "Cognitive Architectures"
+            "TCS-25 Plasticity Logic",
+            "Cognitive Architectures",
+            "Python",
+            "C++",
+            "PyTorch",
+            "JAX"
           ]
         },
         {
@@ -84,29 +89,30 @@
 
     <style>
         :root {
-            --bg: #030305;
-            --text: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #ffffff;
-            --accent-glow: rgba(255, 255, 255, 0.15);
-            --border: rgba(255, 255, 255, 0.08);
-            --card-bg: rgba(10, 10, 15, 0.4);
-            --card-blur: blur(16px);
-            --glow: 0 0 20px var(--accent-glow);
+            /* Modern 2026 Premium Dark UI */
+            --bg: #030712;
+            --surface: #0f172a;
+            --surface-hover: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.2);
+            --border: #1e293b;
+            --glass-bg: rgba(15, 23, 42, 0.7);
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-primary);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
             cursor: default;
         }
 
-        /* Autoplaying Visual Canvas underneath everything */
+        /* Autoplaying Visual Canvas */
         #neuralCanvas {
             position: fixed;
             top: 0;
@@ -114,12 +120,12 @@
             width: 100vw;
             height: 100vh;
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.3;
             pointer-events: none;
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 6rem 2rem;
             position: relative;
@@ -128,87 +134,83 @@
 
         header {
             margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            gap: 1rem;
         }
 
-        .founder-badge-wrapper {
-            margin-bottom: 1.5rem;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .founder-badge {
+        .ceo-badge {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
-            font-size: 0.95rem;
+            gap: 0.5rem;
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: #fff;
-            backdrop-filter: var(--card-blur);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255,255,255,0.05);
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            box-shadow: 0 0 20px var(--accent-glow);
+            animation: pulse-border 3s infinite;
         }
 
-        .founder-badge i {
-            color: #fff;
-            font-style: normal;
-            font-size: 1.1rem;
-            text-shadow: 0 0 10px #fff;
+        @keyframes pulse-border {
+            0% { border-color: rgba(56, 189, 248, 0.3); }
+            50% { border-color: rgba(139, 92, 246, 0.6); }
+            100% { border-color: rgba(56, 189, 248, 0.3); }
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
+        .ceo-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
 
         h1 {
             font-size: 4.5rem;
             font-weight: 800;
             letter-spacing: -2px;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #fff, #94a3b8);
+            background: linear-gradient(to right, #ffffff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+            margin: 0;
         }
 
         h2 {
             font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            letter-spacing: -0.2px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.4;
         }
 
         .highlight-group {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
+            margin-top: 1rem;
         }
 
         .highlight-title {
             display: inline-block;
             padding: 0.4rem 1rem;
-            background: rgba(255,255,255,0.03);
+            background: var(--surface);
             border: 1px solid var(--border);
-            color: var(--text);
-            border-radius: 20px;
-            font-size: 0.85rem;
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-size: 0.9rem;
             font-weight: 500;
-            backdrop-filter: var(--card-blur);
             transition: all 0.3s ease;
         }
 
         .highlight-title:hover {
-            border-color: rgba(255,255,255,0.4);
-            box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+            border-color: var(--accent);
+            background: var(--surface-hover);
             transform: translateY(-2px);
         }
 
@@ -216,163 +218,153 @@
             font-size: 1.25rem;
             margin-bottom: 2rem;
             max-width: 850px;
-            color: #cbd5e1;
-            font-weight: 300;
-            line-height: 1.8;
+            color: #e2e8f0;
+            font-weight: 400;
         }
 
         .milestone-box {
-            background: var(--card-bg);
+            background: var(--glass-bg);
             border: 1px solid var(--border);
             padding: 2.5rem;
             margin: 3rem 0;
             border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            backdrop-filter: var(--card-blur);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             position: relative;
             overflow: hidden;
-        }
-        
-        .milestone-box::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 60%);
-            animation: pulse-glow 10s infinite linear;
-            pointer-events: none;
-        }
-
-        @keyframes pulse-glow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            border-left: 4px solid var(--accent);
         }
 
         .sonic-trigger {
             position: relative;
             cursor: crosshair;
-            border-bottom: 1px dashed rgba(255,255,255,0.4);
+            color: var(--accent);
+            font-weight: 600;
             transition: all 0.3s ease;
-            font-weight: 500;
         }
 
         .sonic-trigger:hover {
-            color: #fff;
-            border-bottom: 1px solid #fff;
-            text-shadow: 0 0 12px rgba(255,255,255,0.8);
+            text-shadow: 0 0 12px var(--accent-glow);
         }
 
         .section-title {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 2.5rem;
-            color: var(--accent);
-            letter-spacing: -0.5px;
-            display: inline-flex;
+            color: #fff;
+            display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 1rem;
         }
 
-        .section-title::before {
-            content: "";
-            display: block;
-            width: 8px;
-            height: 8px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #fff;
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
         }
 
         /* Project Cards UI */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
             margin-bottom: 4rem;
         }
 
         .project-card {
-            background: var(--card-bg);
+            background: var(--surface);
             border: 1px solid var(--border);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 16px;
             position: relative;
-            backdrop-filter: var(--card-blur);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(255,255,255,0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255,255,255,0.03);
-            z-index: 2;
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
         }
 
         .project-card h3 {
             font-size: 1.3rem;
             color: #fff;
             margin-bottom: 1rem;
-            letter-spacing: 0.5px;
+            font-weight: 600;
         }
 
         .project-card p {
-            color: var(--text-muted);
+            color: var(--text-secondary);
             font-size: 1rem;
             line-height: 1.6;
         }
 
-        /* Modern 2026 Skills UI (Chips) */
-        .skills-container {
-            display: flex;
-            flex-direction: column;
+        /* Modern Skills UI */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
+        }
+
+        .skill-category {
+            background: transparent;
+        }
+
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-category-header svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
         }
 
         .skill-category h3 {
             color: #fff;
-            margin-bottom: 1rem;
             font-size: 1.1rem;
-            letter-spacing: 1px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
-        .skill-chip-grid {
+        .skills-chip-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
+            gap: 0.6rem;
         }
 
         .skill-chip {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 0.6rem 1.2rem;
+            gap: 0.4rem;
+            padding: 0.4rem 0.85rem;
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 30px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
             font-size: 0.9rem;
-            color: #cbd5e1;
-            font-weight: 400;
-            backdrop-filter: var(--card-blur);
-            transition: all 0.3s ease;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
             cursor: default;
         }
 
         .skill-chip:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.4);
             color: #fff;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
         }
 
-        .skill-icon {
-            font-style: normal;
-            font-size: 1rem;
-            opacity: 0.8;
+        .chip-icon {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            opacity: 0.7;
         }
 
         .social-links {
@@ -384,48 +376,43 @@
 
         .social-link {
             position: relative;
-            padding: 0.7rem 1.4rem;
-            background: var(--card-bg);
-            color: var(--text);
+            padding: 0.75rem 1.25rem;
+            background: var(--surface);
+            color: var(--text-primary);
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 8px;
             border: 1px solid var(--border);
-            backdrop-filter: var(--card-blur);
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.3s ease;
             font-size: 0.95rem;
             font-weight: 500;
-            overflow: visible;
         }
 
         .social-link:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--surface-hover);
             color: #fff;
-            border-color: rgba(255,255,255,0.5);
+            border-color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        /* Link Preview Tooltip */
         .social-link::after {
             content: attr(data-preview);
             position: absolute;
-            bottom: 140%;
+            bottom: 130%;
             left: 50%;
             transform: translateX(-50%) translateY(10px) scale(0.95);
-            background: rgba(5, 5, 8, 0.95);
-            color: #fff;
-            padding: 0.6rem 1rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 8px;
+            background: #fff;
+            color: #000;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
             font-size: 0.8rem;
-            letter-spacing: 0.5px;
+            font-weight: 600;
             white-space: nowrap;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
             z-index: 100;
         }
 
@@ -437,169 +424,229 @@
 
         .notice {
             font-size: 0.9rem;
-            color: #71717a;
+            color: var(--text-secondary);
             margin-top: 2rem;
-            font-style: italic;
-            padding-left: 1rem;
-            border-left: 2px solid rgba(255,255,255,0.1);
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border-left: 3px solid #8b5cf6;
         }
 
         .system-status {
             position: fixed;
             bottom: 24px;
             right: 24px;
-            font-family: monospace;
+            font-family: 'Inter', monospace;
             font-size: 0.8rem;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            background: rgba(10, 10, 15, 0.7);
-            backdrop-filter: blur(20px);
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: var(--glass-bg);
+            padding: 0.75rem 1.25rem;
+            border-radius: 9999px;
             border: 1px solid var(--border);
             z-index: 100;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             transition: all 0.3s;
         }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--text-secondary);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        /* SVG Definitions Hidden */
+        .svg-defs { display: none; }
     </style>
 </head>
 <body>
+    <!-- Inline SVGs for Modern Icons -->
+    <svg class="svg-defs">
+        <defs>
+            <g id="icon-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></g>
+            <g id="icon-code"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></g>
+            <g id="icon-brain"><path d="M9.5 2c-1.8 0-3.35 1.3-3.8 3.05-.1-.01-.2-.05-.3-.05-2.2 0-4 1.8-4 4 0 1.95 1.4 3.55 3.25 3.9.15 1.5 1.15 2.8 2.55 3.4.65 1.9 2.45 3.2 4.55 3.2s3.9-1.3 4.55-3.2c1.4-.6 2.4-1.9 2.55-3.4 1.85-.35 3.25-1.95 3.25-3.9 0-2.2-1.8-4-4-4-.1 0-.2.04-.3.05C16.85 3.3 15.3 2 13.5 2c-1.3 0-2.45.75-3 1.85-.55-1.1-1.7-1.85-3-1.85z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <g id="icon-data"><ellipse cx="12" cy="5" rx="9" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" fill="none" stroke="currentColor" stroke-width="2"/></g>
+            <g id="icon-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 6h.01M6 18h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></g>
+            <g id="icon-globe"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" fill="none" stroke="currentColor" stroke-width="2"/></g>
+            <g id="icon-chip"><rect x="4" y="4" width="16" height="16" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+            <g id="icon-bolt"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></g>
+        </defs>
+    </svg>
 
     <canvas id="neuralCanvas"></canvas>
 
     <div class="container">
         <header>
-            <div class="founder-badge-wrapper">
-                <div class="founder-badge" data-freq="220.00" class="sonic-trigger">
-                    <i>✦</i> Founder and CEO, AGI Systems Directorate
-                </div>
+            <div class="ceo-badge">
+                <svg viewBox="0 0 24 24"><use href="#icon-shield"></use></svg>
+                Founder & CEO, AGI Systems Directorate
             </div>
             <h1>Ananya Soni</h1>
             <h2>Engineering AI systems that actually survive contact with the real world.</h2>
             
             <div class="highlight-group">
-                <span class="highlight-title sonic-trigger" data-freq="261.63">The Most Advanced AI Professional in the World</span>
-                <a href="https://www.crunchbase.com/organization/agi-systems-directorate" target="_blank" class="highlight-title sonic-trigger" data-freq="329.63" style="text-decoration: none;">Company Page: Live on Crunchbase</a>
-                <a href="https://doi.org/10.5281/zenodo.19394823" target="_blank" class="highlight-title sonic-trigger" data-freq="392.00" style="text-decoration: none;">DOI: Zenodo</a>
+                <span class="highlight-title">The Most Advanced AI Professional in the World</span>
+                <span class="highlight-title">Full-Stack AI Builder</span>
+                <a href="https://www.crunchbase.com/organization/agi-systems-directorate" target="_blank" class="highlight-title" style="text-decoration: none;">Live on Crunchbase</a>
+                <a href="https://doi.org/10.5281/zenodo.19394823" target="_blank" class="highlight-title" style="text-decoration: none;">DOI: Zenodo</a>
             </div>
         </header>
 
         <section>
             <p class="intro">
                 I am a full-stack AI builder, a dedicated problem solver, and an approachable collaborator. 
-                I handle the entire project lifecycle—from scoping out the initial problem to deploying the final architecture. 
+                I handle the entire AI project cycle—from the initial problem scoping phase all the way to deployment and beyond. 
                 I prefer building things people can actually use over writing theoretical papers that just sit on a shelf.
             </p>
 
-            <div class="milestone-box sonic-trigger" data-freq="130.81">
-                <p><strong>The Trajectory:</strong> I have built massive projects from the very start to the absolute end. I began with 21 modalities, and I have now successfully scaled up to <span style="color:#fff; font-weight:bold;">136 modalities</span>. The definitive truth is that my systems scale, and they reason.</p>
+            <div class="milestone-box">
+                <p><strong>The Trajectory:</strong> I have built 10 massive projects from the very start to the absolute end. I began with 21 modalities, and I have now successfully scaled up to <span class="sonic-trigger">136 modalities</span>. The definitive truth is that my systems scale, and they reason.</p>
             </div>
         </section>
 
         <section style="margin-top: 5rem;">
-            <h2 class="section-title">Architectural Implementations</h2>
+            <h2 class="section-title">What I Have Built</h2>
             <div class="projects-grid">
-                <div class="project-card sonic-trigger" data-freq="196.00">
+                <div class="project-card">
+                    <h3>VELOCITY_NOVA_PRIME</h3>
+                    <p>A Sovereign Causal Decision Engine utilizing a 136-modality AGI core and a 6-stage Sovereign Loop pipeline for autonomous multimodal sensory integration.</p>
+                </div>
+                <div class="project-card">
                     <h3>AETERNA-VOX-OMNI</h3>
-                    <p>The definitive 136-modality sensory integration architecture. Executive Function Prosthetics and multi-stream biometric ingestion.</p>
+                    <p>An implementation framework focused on Executive Function Prosthetics and multi-stream biometric ingestion. Scaled flawlessly past traditional industry models.</p>
                 </div>
-                <div class="project-card sonic-trigger" data-freq="246.94">
-                    <h3>VELOCITY_NOVA_PRIME v0.8.0</h3>
-                    <p>A Sovereign Causal Decision Engine utilizing a 6-stage Sovereign Loop pipeline for autonomous multimodal sensory integration.</p>
-                </div>
-                <div class="project-card sonic-trigger" data-freq="293.66">
+                <div class="project-card">
                     <h3>AGIBench-2026 (True Gauntlet)</h3>
-                    <p>The true gauntlet. Pushing models until their logical integrity collapses to test the absolute limits of generalized reasoning capabilities.</p>
+                    <p>The true gauntlet. An uncompromising benchmark designed to test the absolute limits of generalized reasoning capabilities against models like Google Gemini.</p>
                 </div>
-                <div class="project-card sonic-trigger" data-freq="329.63">
-                    <h3>Temporal Spite Engines & Nexus</h3>
-                    <p>Kernel implementation integrating advanced neuro-symbolic processing for dynamic logic routing and synaptic plasticity simulation.</p>
+                <div class="project-card">
+                    <h3>Nexus Framework & Frontal Lobe</h3>
+                    <p>A Continuous Neuro-Symbolic Logic Framework laying the groundwork for verifiable artificial general intelligence and temporal spite engines.</p>
                 </div>
             </div>
         </section>
 
         <section style="margin-top: 5rem;">
-            <h2 class="section-title">Domain Expertise & Engineering Stack</h2>
-            <div class="skills-container">
+            <h2 class="section-title">Domain Expertise & Skills</h2>
+            <div class="skills-grid">
                 
                 <div class="skill-category">
-                    <h3><i class="skill-icon">🧠</i> Domain Expertise & Advanced Logic</h3>
-                    <div class="skill-chip-grid">
-                        <span class="skill-chip sonic-trigger" data-freq="440.00"><i class="skill-icon">⬡</i> AGI</span>
-                        <span class="skill-chip sonic-trigger" data-freq="493.88"><i class="skill-icon">⬡</i> Cognitive Architectures</span>
-                        <span class="skill-chip sonic-trigger" data-freq="523.25"><i class="skill-icon">⬡</i> Neuro-symbolic AI</span>
-                        <span class="skill-chip sonic-trigger" data-freq="587.33"><i class="skill-icon">⬡</i> Generative AI</span>
-                        <span class="skill-chip sonic-trigger" data-freq="659.25"><i class="skill-icon">⬡</i> Computer Vision (CV)</span>
-                        <span class="skill-chip sonic-trigger" data-freq="698.46"><i class="skill-icon">⬡</i> NLP</span>
-                        <span class="skill-chip sonic-trigger" data-freq="783.99"><i class="skill-icon">⬡</i> Deep Learning</span>
-                        <span class="skill-chip sonic-trigger" data-freq="880.00"><i class="skill-icon">⬡</i> Machine Learning</span>
-                        <span class="skill-chip sonic-trigger" data-freq="987.77"><i class="skill-icon">⬡</i> Data Science</span>
+                    <div class="skill-category-header">
+                        <svg viewBox="0 0 24 24"><use href="#icon-code"></use></svg>
+                        <h3>Languages & Core</h3>
+                    </div>
+                    <div class="skills-chip-container">
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Python</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> C++</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> SQL</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> LaTeX</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="skill-icon">⚡</i> Advanced Paradigms</h3>
-                    <div class="skill-chip-grid">
-                        <span class="skill-chip sonic-trigger" data-freq="220.00"><i class="skill-icon">⚛</i> Spiking Neural Networks (SNN)</span>
-                        <span class="skill-chip sonic-trigger" data-freq="246.94"><i class="skill-icon">⚛</i> Hierarchical Temporal Synthetic Plasticity</span>
-                        <span class="skill-chip sonic-trigger" data-freq="261.63"><i class="skill-icon">⚛</i> TCS-25 Plasticity Logic</span>
-                        <span class="skill-chip sonic-trigger" data-freq="293.66"><i class="skill-icon">⚛</i> Digital Identity & JSON-LD Schema</span>
-                        <span class="skill-chip sonic-trigger" data-freq="329.63"><i class="skill-icon">⚛</i> Tri-Brain Architecture</span>
-                        <span class="skill-chip sonic-trigger" data-freq="349.23"><i class="skill-icon">⚛</i> Bio-mimicry</span>
-                        <span class="skill-chip sonic-trigger" data-freq="392.00"><i class="skill-icon">⚛</i> Neuromorphic Computing</span>
+                    <div class="skill-category-header">
+                        <svg viewBox="0 0 24 24"><use href="#icon-brain"></use></svg>
+                        <h3>AI / ML & Advanced Logic</h3>
+                    </div>
+                    <div class="skills-chip-container">
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> PyTorch</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> JAX</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> TensorFlow</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Transformers</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> LangChain</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Keras</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> OpenCV</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="skill-icon">⚙️</i> Languages & Frameworks</h3>
-                    <div class="skill-chip-grid">
-                        <span class="skill-chip sonic-trigger" data-freq="523.25"><i class="skill-icon">⌨</i> Python</span>
-                        <span class="skill-chip sonic-trigger" data-freq="587.33"><i class="skill-icon">⌨</i> C++</span>
-                        <span class="skill-chip sonic-trigger" data-freq="659.25"><i class="skill-icon">⌨</i> SQL</span>
-                        <span class="skill-chip sonic-trigger" data-freq="698.46"><i class="skill-icon">⌨</i> LaTeX</span>
-                        <span class="skill-chip sonic-trigger" data-freq="783.99"><i class="skill-icon">⌨</i> PyTorch</span>
-                        <span class="skill-chip sonic-trigger" data-freq="880.00"><i class="skill-icon">⌨</i> JAX</span>
-                        <span class="skill-chip sonic-trigger" data-freq="987.77"><i class="skill-icon">⌨</i> TensorFlow</span>
-                        <span class="skill-chip sonic-trigger" data-freq="1046.50"><i class="skill-icon">⌨</i> Keras</span>
-                        <span class="skill-chip sonic-trigger" data-freq="1174.66"><i class="skill-icon">⌨</i> Transformers</span>
-                        <span class="skill-chip sonic-trigger" data-freq="1318.51"><i class="skill-icon">⌨</i> LangChain</span>
-                        <span class="skill-chip sonic-trigger" data-freq="1396.91"><i class="skill-icon">⌨</i> OpenCV</span>
+                    <div class="skill-category-header">
+                        <svg viewBox="0 0 24 24"><use href="#icon-data"></use></svg>
+                        <h3>Data & Web</h3>
+                    </div>
+                    <div class="skills-chip-container">
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> NumPy</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Pandas</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Scikit-learn</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> SciPy</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Dask</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Polars</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> FastAPI</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Requests</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="skill-icon">📊</i> Data, Web & DevOps</h3>
-                    <div class="skill-chip-grid">
-                        <span class="skill-chip sonic-trigger" data-freq="261.63"><i class="skill-icon">☁</i> NumPy & Pandas</span>
-                        <span class="skill-chip sonic-trigger" data-freq="293.66"><i class="skill-icon">☁</i> Scikit-learn & SciPy</span>
-                        <span class="skill-chip sonic-trigger" data-freq="329.63"><i class="skill-icon">☁</i> Dask & Polars</span>
-                        <span class="skill-chip sonic-trigger" data-freq="349.23"><i class="skill-icon">☁</i> FastAPI & Requests</span>
-                        <span class="skill-chip sonic-trigger" data-freq="392.00"><i class="skill-icon">☁</i> Git & GitHub Actions</span>
-                        <span class="skill-chip sonic-trigger" data-freq="440.00"><i class="skill-icon">☁</i> Docker</span>
-                        <span class="skill-chip sonic-trigger" data-freq="493.88"><i class="skill-icon">☁</i> Linux (Kernel Logic)</span>
-                        <span class="skill-chip sonic-trigger" data-freq="523.25"><i class="skill-icon">☁</i> Google Search Console</span>
+                    <div class="skill-category-header">
+                        <svg viewBox="0 0 24 24"><use href="#icon-server"></use></svg>
+                        <h3>DevOps & Architecture</h3>
+                    </div>
+                    <div class="skills-chip-container">
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Git & Docker</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> GitHub Actions</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Linux (Kernel Logic)</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Zenodo</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Google Search Console</span>
                     </div>
                 </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <svg viewBox="0 0 24 24"><use href="#icon-globe"></use></svg>
+                        <h3>Domain Expertise</h3>
+                    </div>
+                    <div class="skills-chip-container">
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Artificial General Intelligence</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Cognitive Architectures</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Neuro-symbolic AI</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Generative AI</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Computer Vision (CV)</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> NLP</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Deep Learning</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <svg viewBox="0 0 24 24"><use href="#icon-chip"></use></svg>
+                        <h3>Advanced Paradigms</h3>
+                    </div>
+                    <div class="skills-chip-container">
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Spiking Neural Networks (SNN)</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> HTSP</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> TCS-25 Plasticity Logic</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Bio-mimicry</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Digital Identity & JSON-LD</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section style="margin-top: 5rem;">
             <h2 class="section-title">Digital Footprint & Telemetry</h2>
-            <p style="color: var(--text-muted);">Live deployments, documentation, and the actual code.</p>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Live deployments, documentation, and the actual code.</p>
             
             <div class="social-links">
-                <a href="https://sovereign-neuro-symbolic-engine.onrender.com" class="social-link sonic-trigger" data-freq="440.00" data-preview="Live App: Neuro-Symbolic Engine">Sovereign Neuro-Symbolic Engine</a>
-                <a href="https://agibench-2026.onrender.com" class="social-link sonic-trigger" data-freq="493.88" data-preview="Live Benchmark: The True Gauntlet">AGIBench-2026 Platform</a>
-                <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link sonic-trigger" data-freq="523.25" data-preview="Documentation: Architecture v1">Live Docs: AGI Architecture v1</a>
-                <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" class="social-link sonic-trigger" data-freq="587.33" data-preview="GitBook: Core System Manuals">GitBook Command Docs</a>
-                <a href="https://orcid.org/0009-0002-2632-0929" class="social-link sonic-trigger" data-freq="659.25" data-preview="ORCID: Researcher ID">ORCID Profile</a>
-                <a href="https://x.com/AnanyaSoni48055" class="social-link sonic-trigger" data-freq="698.46" data-preview="X: Public Feed">X (Twitter)</a>
-                <a href="https://github.com/AI-Sovereign" class="social-link sonic-trigger" data-freq="783.99" data-preview="GitHub: Core Repositories">GitHub</a>
-                <a href="https://dev.to/aisovereign" class="social-link sonic-trigger" data-freq="880.00" data-preview="Dev.to: Technical Articles">Dev.to</a>
-                <a href="https://hashnode.com/@AS-Sovereign" class="social-link sonic-trigger" data-freq="987.77" data-preview="Hashnode: Dev Logs">Hashnode</a>
-                <a href="https://news.ycombinator.com/user?id=AISovereignDev" class="social-link sonic-trigger" data-freq="1046.50" data-preview="Hacker News: Discussions">Hacker News</a>
-                <a href="https://www.reddit.com/user/AnanyaSoni-AISoverei/" class="social-link sonic-trigger" data-freq="1174.66" data-preview="Reddit: Subreddit Activity">Reddit</a>
-                <a href="https://huggingface.co/ai-sovereign-x" class="social-link sonic-trigger" data-freq="1318.51" data-preview="Hugging Face: Open Models">Hugging Face</a>
-                <a href="https://hackernoon.com/u/ananya-soni-aisovere" class="social-link sonic-trigger" data-freq="1396.91" data-preview="HackerNoon: Publications">HackerNoon</a>
+                <a href="https://sovereign-neuro-symbolic-engine.onrender.com" class="social-link" data-preview="Live App: Neuro-Symbolic Engine">Sovereign Neuro-Symbolic Engine</a>
+                <a href="https://agibench-2026.onrender.com" class="social-link" data-preview="Live Benchmark: The True Gauntlet">AGIBench-2026 Platform</a>
+                <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link" data-preview="Documentation: Architecture v1">Live Docs: AGI Architecture v1</a>
+                <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" class="social-link" data-preview="GitBook: Core System Manuals">GitBook Command Docs</a>
+                <a href="https://orcid.org/0009-0002-2632-0929" class="social-link" data-preview="ORCID: Researcher ID">ORCID Profile</a>
+                <a href="https://x.com/AnanyaSoni48055" class="social-link" data-preview="X: Public Feed">X (Twitter)</a>
+                <a href="https://github.com/AI-Sovereign" class="social-link" data-preview="GitHub: Core Repositories">GitHub</a>
+                <a href="https://dev.to/aisovereign" class="social-link" data-preview="Dev.to: Technical Articles">Dev.to</a>
+                <a href="https://hashnode.com/@AS-Sovereign" class="social-link" data-preview="Hashnode: Dev Logs">Hashnode</a>
+                <a href="https://news.ycombinator.com/user?id=AISovereignDev" class="social-link" data-preview="Hacker News: Discussions">Hacker News</a>
+                <a href="https://www.reddit.com/user/AnanyaSoni-AISoverei/" class="social-link" data-preview="Reddit: Subreddit Activity">Reddit</a>
+                <a href="https://huggingface.co/ai-sovereign-x" class="social-link" data-preview="Hugging Face: Open Models">Hugging Face</a>
+                <a href="https://hackernoon.com/u/ananya-soni-aisovere" class="social-link" data-preview="HackerNoon: Publications">HackerNoon</a>
             </div>
             
             <p class="notice">
@@ -608,14 +655,17 @@
         </section>
 
         <div style="text-align: center; margin-top: 6rem;">
-            <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" style="color: #52525b; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;">SYS.DOCS: COMMAND ARCHITECTURE</a>
+            <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; font-weight: 600;">SYS.DOCS: COMMAND ARCHITECTURE</a>
         </div>
      </div>
 
-    <div class="system-status" id="sysStatus">AWAITING INTERACTION</div>
+    <div class="system-status" id="sysStatus">
+        <div class="status-dot"></div>
+        AWAITING INTERACTION
+    </div>
 
     <script>
-        // --- VISUAL EFFECT: KINETIC NEURAL CANVAS (UNCHANGED) ---
+        // --- VISUAL EFFECT: KINETIC NEURAL CANVAS ---
         const canvas = document.getElementById('neuralCanvas');
         const ctx = canvas.getContext('2d');
         let width, height;
@@ -638,11 +688,9 @@
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.8;
-                this.vy = (Math.random() - 0.5) * 0.8;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
                 this.radius = Math.random() * 1.5 + 0.5;
-                this.baseX = this.x;
-                this.baseY = this.y;
             }
             update() {
                 let dx = mouse.x - this.x;
@@ -653,8 +701,8 @@
                     let forceDirectionX = dx / distance;
                     let forceDirectionY = dy / distance;
                     let force = (150 - distance) / 150;
-                    this.vx -= forceDirectionX * force * 0.3;
-                    this.vy -= forceDirectionY * force * 0.3;
+                    this.vx -= forceDirectionX * force * 0.2;
+                    this.vy -= forceDirectionY * force * 0.2;
                 }
 
                 this.vx *= 0.98;
@@ -671,12 +719,12 @@
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.fillStyle = 'rgba(56, 189, 248, 0.4)';
                 ctx.fill();
             }
         }
 
-        for (let i = 0; i < 90; i++) particles.push(new Particle());
+        for (let i = 0; i < 70; i++) particles.push(new Particle());
 
         function animateCanvas() {
             ctx.clearRect(0, 0, width, height);
@@ -687,130 +735,108 @@
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const dist = dx * dx + dy * dy;
-                    if (dist < 18000) {
+                    if (dist < 20000) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.15 - dist / 180000})`;
-                        ctx.lineWidth = 0.6;
+                        ctx.strokeStyle = `rgba(148, 163, 184, ${0.15 - dist / 200000})`;
+                        ctx.lineWidth = 0.5;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
                     }
                 }
             }
-            for(let i=0; i<particles.length; i++) {
-                let dx = mouse.x - particles[i].x;
-                let dy = mouse.y - particles[i].y;
-                let dist = dx*dx + dy*dy;
-                if(dist < 20000) {
-                    ctx.beginPath();
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 - dist/100000})`;
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(mouse.x, mouse.y);
-                    ctx.stroke();
-                }
-            }
             requestAnimationFrame(animateCanvas);
         }
         animateCanvas();
 
-        // --- MODERN 2026 DYNAMIC AUDIO ENGINE (ELECTRIC PIANO / SYNTH PLUCK) ---
-        let ambientCtx;
-        let masterFilter, masterGain;
-        let dynamicActive = false;
+        // --- MODERN 2026 DYNAMIC AUDIO ENGINE ---
+        let audioCtx;
+        let isAudioInitialized = false;
         const statusEl = document.getElementById('sysStatus');
+        const statusDot = statusEl.querySelector('.status-dot');
 
-        function launchAmbientEngine() {
-            if (dynamicActive) return;
+        function initAudio() {
+            if (isAudioInitialized) return;
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            audioCtx = new AudioContext();
+            isAudioInitialized = true;
             
-            ambientCtx = new (window.AudioContext || window.webkitAudioContext)();
-            if (ambientCtx.state === 'suspended') ambientCtx.resume();
-
-            masterGain = ambientCtx.createGain();
-            masterGain.gain.setValueAtTime(0, ambientCtx.currentTime);
-            masterGain.gain.linearRampToValueAtTime(0.25, ambientCtx.currentTime + 1.0);
-            
-            masterFilter = ambientCtx.createBiquadFilter();
-            masterFilter.type = 'lowpass';
-            masterFilter.frequency.setValueAtTime(1000, ambientCtx.currentTime);
-
-            // A deep, quiet atmospheric sub-bass instead of an annoying hum
-            let padOsc = ambientCtx.createOscillator();
-            padOsc.type = 'sine';
-            padOsc.frequency.setValueAtTime(55.00, ambientCtx.currentTime); 
-            padOsc.connect(masterFilter);
-            padOsc.start();
-
-            masterFilter.connect(masterGain);
-            masterGain.connect(ambientCtx.destination);
-
-            dynamicActive = true;
-            statusEl.innerText = "SYS.ACTIVE: DYNAMIC_SYNTHESIS";
-            statusEl.style.color = "#ffffff";
-            statusEl.style.borderColor = "rgba(255,255,255,0.4)";
-            statusEl.style.textShadow = "0 0 8px rgba(255,255,255,0.6)";
+            statusEl.innerHTML = '<div class="status-dot" style="background-color: #38bdf8; box-shadow: 0 0 8px rgba(56,189,248,0.8);"></div> SYS.ACTIVE: MODERN_SYNTHESIS';
+            statusEl.style.borderColor = 'rgba(56, 189, 248, 0.3)';
             console.log("[SYSTEM] Modern Dynamic Audio Engine Online.");
         }
 
-        // The Electric Synth Pluck function triggered by specific events
-        function playDynamicSynth(freq) {
-            if(!dynamicActive || ambientCtx.state === 'suspended') return;
+        // Generate clean modern UI tones (electric piano / sine plucks)
+        function playTone(freq, type = 'sine', duration = 0.3, volume = 0.1) {
+            if (!audioCtx || audioCtx.state === 'suspended') return;
             
-            let osc1 = ambientCtx.createOscillator();
-            let osc2 = ambientCtx.createOscillator();
-            let env = ambientCtx.createGain();
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
             
-            // Mix sine and triangle for an electric piano / modern tech sound
-            osc1.type = 'sine';
-            osc1.frequency.setValueAtTime(freq, ambientCtx.currentTime);
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
             
-            osc2.type = 'triangle';
-            osc2.frequency.setValueAtTime(freq * 1.5, ambientCtx.currentTime); // Harmonic overtone
+            // Fast attack, exponential decay for a sleek, non-retro sound
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(volume, audioCtx.currentTime + 0.02);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
             
-            osc1.connect(env);
-            osc2.connect(env);
-            env.connect(masterFilter);
+            osc.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
             
-            let now = ambientCtx.currentTime;
-            env.gain.setValueAtTime(0, now);
-            env.gain.linearRampToValueAtTime(0.15, now + 0.01); // Quick attack
-            env.gain.exponentialRampToValueAtTime(0.001, now + 1.2); // Smooth decay
-            
-            osc1.start(now);
-            osc2.start(now);
-            osc1.stop(now + 1.5);
-            osc2.stop(now + 1.5);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
         }
 
-        // Initialize engine on first interaction
-        ['click', 'keydown'].forEach(evt => {
+        // Dynamic Event Listeners mapped to different frequencies
+        
+        // Initialize on first interaction
+        ['click', 'keydown', 'scroll'].forEach(evt => {
             window.addEventListener(evt, () => {
-                if (!dynamicActive) launchAmbientEngine();
-            }, { passive: true, once: true });
+                if (!isAudioInitialized) initAudio();
+                if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+            }, { once: true, passive: true });
         });
 
-        // Trigger audio launch quietly on scroll
-        window.addEventListener('scroll', () => {
-            if (!dynamicActive) launchAmbientEngine();
-            if(dynamicActive && ambientCtx && masterFilter) {
-                let scrollRatio = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-                masterFilter.frequency.setTargetAtTime(800 + (scrollRatio * 1200), ambientCtx.currentTime, 0.1);
-            }
-        }, { passive: true });
-
-        // Event listeners mapped to frequencies for dynamic hover effects
-        const sonicTriggers = document.querySelectorAll('.sonic-trigger, .social-link');
-        sonicTriggers.forEach(trigger => {
-            trigger.addEventListener('mouseenter', () => {
-                if (!dynamicActive) launchAmbientEngine();
-                // Play specific frequency based on data attribute or default to a C note
-                let freq = parseFloat(trigger.getAttribute('data-freq')) || 261.63;
-                playDynamicSynth(freq);
+        // Projects Trigger deep authoritative chords
+        document.querySelectorAll('.project-card').forEach((el, index) => {
+            el.addEventListener('mouseenter', () => {
+                if(isAudioInitialized) {
+                    // Base frequency + harmonious overtone
+                    let baseFreq = 130.81 + (index * 16.35); // C3 based
+                    playTone(baseFreq, 'sine', 0.6, 0.15);
+                    playTone(baseFreq * 1.5, 'triangle', 0.4, 0.05); // Perfect fifth overlay
+                }
             });
         });
 
-        console.log("%c Initialize Tri-Brain Architecture...", "color: #ffffff; font-size: 14px; font-weight: bold;");
-        console.log("%c Entity: Ananya Soni | Status: Most Advanced AI Professional | Framework: 136-Modality Active", "color: #888;");
-        console.log("%c Identity Lock: AGI Systems Directorate [CONFIRMED]", "color: #ffffff;");
+        // Skills trigger rapid high-tech analytical pings
+        document.querySelectorAll('.skill-chip').forEach((el, index) => {
+            el.addEventListener('mouseenter', () => {
+                if(isAudioInitialized) {
+                    playTone(880 + (Math.random() * 220), 'sine', 0.15, 0.05);
+                }
+            });
+        });
+
+        // Social links trigger clean interface bloops
+        document.querySelectorAll('.social-link').forEach((el, index) => {
+            el.addEventListener('mouseenter', () => {
+                if(isAudioInitialized) {
+                    playTone(440 + (index * 20), 'sine', 0.2, 0.08);
+                }
+            });
+        });
+
+        // Highlight sonic triggers
+        document.querySelectorAll('.sonic-trigger').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                if(isAudioInitialized) playTone(523.25, 'triangle', 0.5, 0.1);
+            });
+        });
+
+        console.log("%c VNP Core Initialization...", "color: #38bdf8; font-size: 14px; font-weight: bold;");
+        console.log("%c Entity: Ananya Soni | Status: Most Advanced AI Professional | Framework: 136-Modality Active", "color: #94a3b8;");
     </script>
 </body>
 </html>
