@@ -33,6 +33,7 @@
           },
           "url": "https://ai-sovereign.github.io/",
           "sameAs": [
+            "https://www.wikidata.org/wiki/Q139889558",
             "https://x.com/AnanyaSoni48055",
             "https://www.reddit.com/user/AnanyaSoni-AISoverei/",
             "https://dev.to/aisovereign",
@@ -80,6 +81,15 @@
           "url": "https://ai-sovereign.github.io/",
           "name": "AI Sovereign Nexus",
           "publisher": {
+            "@id": "https://kg.google.com/g/11wh9xc38f"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://www.wikidata.org/wiki/Q139961699",
+          "name": "The Nexus Framework: Scalable Architectures for Autonomous Cross-Domain AGI",
+          "url": "https://www.wikidata.org/wiki/Q139961699",
+          "author": {
             "@id": "https://kg.google.com/g/11wh9xc38f"
           }
         }
@@ -423,13 +433,16 @@
         }
 
         .notice {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             color: var(--text-secondary);
             margin-top: 2rem;
-            padding: 1rem;
+            padding: 1.5rem;
             background: rgba(255, 255, 255, 0.02);
             border-radius: 8px;
-            border-left: 3px solid #8b5cf6;
+            border-left: 3px solid var(--accent);
+            text-align: center;
+            font-style: italic;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
         }
 
         .system-status {
@@ -462,6 +475,44 @@
 
         /* SVG Definitions Hidden */
         .svg-defs { display: none; }
+
+        /* Quantum Core - Crazy Bottom Visual */
+        .quantum-core-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            height: 200px;
+        }
+        
+        .core-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: var(--accent);
+            border-bottom-color: rgba(139, 92, 246, 0.8);
+            animation: spin-core linear infinite;
+        }
+        
+        .core-ring-1 { width: 100px; height: 100px; animation-duration: 2s; }
+        .core-ring-2 { width: 140px; height: 140px; animation-duration: 3s; animation-direction: reverse; border-top-color: rgba(139, 92, 246, 0.8); border-bottom-color: var(--accent); opacity: 0.7; }
+        .core-ring-3 { width: 180px; height: 180px; animation-duration: 5s; border-left-color: var(--accent); border-top-color: transparent; border-bottom-color: transparent; opacity: 0.4; }
+        
+        .core-text {
+            font-family: monospace;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px var(--accent);
+            animation: pulse-text 2s infinite;
+            z-index: 2;
+        }
+        
+        @keyframes spin-core { 100% { transform: rotate(360deg); } }
+        @keyframes pulse-text { 0%, 100% { opacity: 0.8; } 50% { opacity: 1; transform: scale(1.05); } }
     </style>
 </head>
 <body>
@@ -562,6 +613,7 @@
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> LangChain</span>
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Keras</span>
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> OpenCV</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> CUDA / TensorRT</span>
                     </div>
                 </div>
 
@@ -579,6 +631,7 @@
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Polars</span>
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> FastAPI</span>
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Requests</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> ONNX</span>
                     </div>
                 </div>
 
@@ -609,6 +662,7 @@
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Computer Vision (CV)</span>
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> NLP</span>
                         <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Deep Learning</span>
+                        <span class="skill-chip"><svg class="chip-icon" viewBox="0 0 24 24"><use href="#icon-bolt"></use></svg> Robotics</span>
                     </div>
                 </div>
 
@@ -634,6 +688,8 @@
             <p style="color: var(--text-secondary); margin-bottom: 2rem;">Live deployments, documentation, and the actual code.</p>
             
             <div class="social-links">
+                <a href="https://www.wikidata.org/wiki/Q139889558" class="social-link" data-preview="Wikidata: Verified Entity">Wikidata (Person)</a>
+                <a href="https://www.wikidata.org/wiki/Q139961699" class="social-link" data-preview="Wikidata: Academic Artifact">Wikidata (Nexus Paper)</a>
                 <a href="https://sovereign-neuro-symbolic-engine.onrender.com" class="social-link" data-preview="Live App: Neuro-Symbolic Engine">Sovereign Neuro-Symbolic Engine</a>
                 <a href="https://agibench-2026.onrender.com" class="social-link" data-preview="Live Benchmark: The True Gauntlet">AGIBench-2026 Platform</a>
                 <a href="https://ai-sovereign.github.io/Multimodal-AGI-Architecture-Implementation-v1/" class="social-link" data-preview="Documentation: Architecture v1">Live Docs: AGI Architecture v1</a>
@@ -650,11 +706,19 @@
             </div>
             
             <p class="notice">
-                Fair warning: My LinkedIn is currently trapped in a permanent digital lockdown. If you see it floating around, please ignore it. Find me where the actual humans are instead.
+                "We don't build systems to simulate intelligence; we engineer architectures to transcend it."
             </p>
         </section>
 
-        <div style="text-align: center; margin-top: 6rem;">
+        <!-- The "Crazy Thing" you asked for -->
+        <div class="quantum-core-container">
+            <div class="core-ring core-ring-1"></div>
+            <div class="core-ring core-ring-2"></div>
+            <div class="core-ring core-ring-3"></div>
+            <div class="core-text">AGI_CORE_ONLINE</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
             <a href="https://global-agi-sovereignty-architect.gitbook.io/global-agi-sovereignty-architect-command-docs/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; font-weight: 600;">SYS.DOCS: COMMAND ARCHITECTURE</a>
         </div>
      </div>
@@ -682,6 +746,19 @@
         window.addEventListener('mousemove', (e) => {
             mouse.x = e.clientX;
             mouse.y = e.clientY;
+        });
+        
+        // Interactive visual burst on click (part of your crazy visual upgrade)
+        window.addEventListener('click', (e) => {
+            for(let i=0; i<15; i++) {
+                let p = new Particle();
+                p.x = e.clientX;
+                p.y = e.clientY;
+                p.vx = (Math.random() - 0.5) * 12;
+                p.vy = (Math.random() - 0.5) * 12;
+                particles.push(p);
+            }
+            if(particles.length > 120) particles.splice(0, 15);
         });
 
         class Particle {
@@ -761,37 +838,42 @@
             audioCtx = new AudioContext();
             isAudioInitialized = true;
             
-            statusEl.innerHTML = '<div class="status-dot" style="background-color: #38bdf8; box-shadow: 0 0 8px rgba(56,189,248,0.8);"></div> SYS.ACTIVE: MODERN_SYNTHESIS';
+            statusEl.innerHTML = '<div class="status-dot" style="background-color: #38bdf8; box-shadow: 0 0 8px rgba(56,189,248,0.8);"></div> SYS.ACTIVE: SPATIAL_SYNTHESIS';
             statusEl.style.borderColor = 'rgba(56, 189, 248, 0.3)';
             console.log("[SYSTEM] Modern Dynamic Audio Engine Online.");
         }
 
-        // Generate clean modern UI tones (electric piano / sine plucks)
-        function playTone(freq, type = 'sine', duration = 0.3, volume = 0.1) {
+        // Upgraded to a highly modern, glassy UI sound using dual oscillators
+        function playTone(freq, type = 'sine', duration = 0.4, volume = 0.1) {
             if (!audioCtx || audioCtx.state === 'suspended') return;
             
             const osc = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
             const gainNode = audioCtx.createGain();
             
             osc.type = type;
             osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
             
-            // Fast attack, exponential decay for a sleek, non-retro sound
+            osc2.type = 'sine';
+            osc2.frequency.setValueAtTime(freq * 2.01, audioCtx.currentTime); // Glassy overtone
+            
+            // Fast attack, exponential decay for a sleek, spatial sound
             gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-            gainNode.gain.linearRampToValueAtTime(volume, audioCtx.currentTime + 0.02);
+            gainNode.gain.exponentialRampToValueAtTime(volume, audioCtx.currentTime + 0.01);
             gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
             
             osc.connect(gainNode);
+            osc2.connect(gainNode);
             gainNode.connect(audioCtx.destination);
             
             osc.start();
+            osc2.start();
             osc.stop(audioCtx.currentTime + duration);
+            osc2.stop(audioCtx.currentTime + duration);
         }
 
-        // Dynamic Event Listeners mapped to different frequencies
-        
-        // Initialize on first interaction
-        ['click', 'keydown', 'scroll'].forEach(evt => {
+        // Dynamic Event Listeners mapped to different frequencies (Added touchstart for phones)
+        ['click', 'keydown', 'scroll', 'touchstart'].forEach(evt => {
             window.addEventListener(evt, () => {
                 if (!isAudioInitialized) initAudio();
                 if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
@@ -802,7 +884,6 @@
         document.querySelectorAll('.project-card').forEach((el, index) => {
             el.addEventListener('mouseenter', () => {
                 if(isAudioInitialized) {
-                    // Base frequency + harmonious overtone
                     let baseFreq = 130.81 + (index * 16.35); // C3 based
                     playTone(baseFreq, 'sine', 0.6, 0.15);
                     playTone(baseFreq * 1.5, 'triangle', 0.4, 0.05); // Perfect fifth overlay
