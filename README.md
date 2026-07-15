@@ -45,6 +45,10 @@ And let's face facts about human prejudice: searchers almost exclusively click o
 
 This template provides a pre-configured, syntactically perfect JSON-LD schema. You don't have to worry about the complex formatting that trips most people up. You can copy the code, run it through the official **Schema Markup Validator**, and it will pass without a single error. 
 
+This is an incredibly dense, highly detailed schema configuration linking three distinct entities: **Person**, **Organization** (representing my company, *AGI Systems Directorate*), and **ScholarlyArticle** (representing published technical preprints/Zenodo papers). It establishes explicit, machine-readable connections using properties like `sameAs` and `knowsAbout`. Because of how complex and heavily nested this script is, I cannot explain every single line of the JSON-LD schema in this README architecture—you will need to open the `index.html` file to inspect the raw structure yourself.
+
+Crucially, this schema contains a designated field for your Google Knowledge Graph Machine ID (**KGM ID** or `kgmid`). If you already have your own KGM ID, replace my ID with yours to anchor your digital footprint. If you do not have one yet, simply omit that specific property from the schema block. If you want to find out whether you have an existing ID, you can easily query it using the Google Knowledge Graph Search API or search via the Google Knowledge Graph Explorer.
+
 By configuring this correctly and establishing verified connections with your other third-party profiles, you set yourself up to be indexed directly into the **Google Knowledge Graph**. Many people obsess over getting a Google Knowledge Panel (that pretty informational box on the right side of a search page), but they don't realize that the panel is just a visual byproduct. The real prize is your underlying presence in the Knowledge Graph itself. Once the machine graph understands who you are, your search authority is locked in.
 
 ### Absolute Crawler Control
@@ -86,6 +90,12 @@ The bottom of the file contains the JavaScript for the neural canvas and the tec
 5. Save. 
 
 Your portfolio is now live, globally distributed, highly optimized for search engines, and completely free to maintain. 
+
+### Zero-Cost Sovereign Deployment
+
+Let's be brutally honest: you now have a fully functioning, highly interactive portfolio site at **absolute zero cost ($0)**. No recurring subscription fees, and no paying monthly tolls for a custom domain just to prove your engineering credentials. 
+
+I specifically designed this architecture to bypass the financial overhead that other setups demand. While a custom domain can unlock Knowledge Graph authority, standard hosting on platforms like Vercel with free `.vercel.app` subdomains locks you out—they do not allow the deep search console integrations and manual bot re-indexing you need to force-feed your schema to the crawler. This template is a lethal, free alternative. It is an absolute weapon for building Knowledge Graph authority without spending a single dollar. You simply copy the file, replace my data with yours, and deploy.
 
 ---
 
