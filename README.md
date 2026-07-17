@@ -45,7 +45,7 @@ And let's face facts about human prejudice: searchers almost exclusively click o
 
 This template provides a pre-configured, syntactically perfect JSON-LD schema. You don't have to worry about the complex formatting that trips most people up. You can copy the code, run it through the official **Schema Markup Validator**, and it will pass without a single error. 
 
-This is an incredibly dense, highly detailed schema configuration linking three distinct entities: **Person**, **Organization** (representing my company, *AGI Systems Directorate*), and **ScholarlyArticle** (representing published technical preprints/Zenodo papers). It establishes explicit, machine-readable connections using properties like `sameAs` and `knowsAbout`. Because of how complex and heavily nested this script is, I cannot explain every single line of the JSON-LD schema in this README architecture—you will need to open the `index.html` file to inspect the raw structure yourself.
+This is an incredibly dense, highly detailed schema configuration linking distinct entities like **Person**, **Organization** (representing my company, *AGI Systems Directorate*), and **ScholarlyArticle** (representing published technical preprints/Zenodo papers). But these are just a glimpse to help you understand. I actually have four types of schemas in that one JSON-LD block, not just three. Because of how complex, dense, and heavily nested this script is, I cannot explain everything in this one architecture file. If you want to find more information, see the full JSON-LD schema in detail, and learn what the properties are, you have to check out the main `index.html` file.
 
 Crucially, this schema contains a designated field for your Google Knowledge Graph Machine ID (**KGM ID** or `kgmid`). If you already have your own KGM ID, replace my ID with yours to anchor your digital footprint. If you do not have one yet, simply omit that specific property from the schema block. If you want to find out whether you have an existing ID, you can easily query it using the Google Knowledge Graph Search API or search via the Google Knowledge Graph Explorer.
 
@@ -93,9 +93,9 @@ Your portfolio is now live, globally distributed, highly optimized for search en
 
 ### Zero-Cost Sovereign Deployment
 
-Let's be brutally honest: you now have a fully functioning, highly interactive portfolio site at **absolute zero cost ($0)**. No recurring subscription fees, and no paying monthly tolls for a custom domain just to prove your engineering credentials. 
+Let's be brutally honest: you now have a fully functional, Googlebot and other crawlers-optimized portfolio site ready for the Knowledge Graph without spending any dollars ($0). Without any configuration, you are ready. No recurring subscription fees, and no paying monthly tolls for a custom domain just to prove your engineering credentials. 
 
-I specifically designed this architecture to bypass the financial overhead that other setups demand. While a custom domain can unlock Knowledge Graph authority, standard hosting on platforms like Vercel with free `.vercel.app` subdomains locks you out—they do not allow the deep search console integrations and manual bot re-indexing you need to force-feed your schema to the crawler. This template is a lethal, free alternative. It is an absolute weapon for building Knowledge Graph authority without spending a single dollar. You simply copy the file, replace my data with yours, and deploy.
+I specifically designed this architecture to bypass the financial overhead that other setups demand. While a custom domain can unlock Knowledge Graph authority, standard hosting on platforms like Vercel with free `.vercel.app` subdomains locks you out—they do not allow the deep search console integrations and manual bot re-indexing you need to force-feed your schema to the crawler. This template is a lethal, free alternative. It is an absolute weapon for building Knowledge Graph authority without spending a single dollar. Just copy it, replace my details with your details, and you are good to go. Just deploy it.
 
 ---
 
@@ -103,12 +103,12 @@ I specifically designed this architecture to bypass the financial overhead that 
 
 I know what you might be thinking: *Why does an AI engineer know this much about search engine crawlers, indexing latency, and structured data schemas? Isn't that the job of an SEO marketing specialist?* 
 
-Let's be clear: I am not an SEO or Knowledge Graph professional. I am an Artificial Intelligence professional engineering architectures for Artificial General Intelligence (AGI). 
+Let's be clear: I am not a Knowledge Graph professional. I am an Artificial Intelligence professional working in Artificial General Intelligence (AGI). I didn't know about these things before I did the research for them, so don't worry. 
 
-But here is the reality of the industry: if you want to establish a real presence and be recognized by the actual heavyweights in the AI field, you cannot afford to be invisible. It does not matter how capable you are if the algorithms that map professional networks cannot find you. I did the deep research into Googlebot, semantic schemas, and the Knowledge Graph because I needed to eliminate any machine-name ambiguity. When international peers search for my work, they need to find me instantly, without wading through noise. As an AI developer in 2026, you need to understand these systems. If you want to build at the highest level, you have to make sure the world can actually see what you built.
+But here is the reality of the industry: it is not just me, you also need to know about these things. Every AI developer, builder, and engineer wants to be recognized, and search visibility is how you get recognized. It does not matter how capable you are if the algorithms that map professional networks cannot find you. I did the deep research into Googlebot, semantic schemas, and the Knowledge Graph because I needed to eliminate any machine-name ambiguity. When international peers search for my work, they need to find me instantly, without wading through noise. As an AI developer in 2026, you need to understand these systems. If you want to build at the highest level, you have to make sure the world can actually see what you built.
 
 ---
 
-*Authored by Ananya Soni — Founder & CEO, AGI Systems Directorate.*
+*Authored by Ananya Soni — Founder & CEO at AGI Systems Directorate.*
 
 > Welcome to 2026. Implementation first. Stop building by hard work alone, start building by smart work, and let the architecture speak for itself. 
